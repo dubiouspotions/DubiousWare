@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spaceship.png-c1617b2e181416522fd79798b798cd93.stex"
+path="res://.import/flame02.png-8e74db81e458175743cad1e40e79ebd6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/spacejump/assets/spaceship.png"
-dest_files=[ "res://.import/spaceship.png-c1617b2e181416522fd79798b798cd93.stex" ]
+source_file="res://minigames/spacejump/assets/flame02.png"
+dest_files=[ "res://.import/flame02.png-8e74db81e458175743cad1e40e79ebd6.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://minigames/spacejump/assets/bg.png" type="Texture" id=1]
 [ext_resource path="res://minigames/spacejump/spacejump.gd" type="Script" id=2]
@@ -8,9 +8,20 @@
 [ext_resource path="res://minigames/spacejump/assets/ship.png" type="Texture" id=6]
 [ext_resource path="res://minigames/spacejump/PlayerShip.gd" type="Script" id=7]
 [ext_resource path="res://minigames/spacejump/planet.gd" type="Script" id=8]
+[ext_resource path="res://minigames/spacejump/assets/flame02.png" type="Texture" id=9]
+[ext_resource path="res://minigames/spacejump/assets/flame03.png" type="Texture" id=10]
+[ext_resource path="res://minigames/spacejump/assets/flame01.png" type="Texture" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 37.6962
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="SpaceJump" type="Node2D"]
 script = ExtResource( 2 )
@@ -57,3 +68,11 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerShip"]
 shape = SubResource( 1 )
+
+[node name="flame" type="AnimatedSprite" parent="PlayerShip"]
+position = Vector2( -1, 72 )
+rotation = -1.5708
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 2 )
+frame = 1
+speed_scale = 4.899

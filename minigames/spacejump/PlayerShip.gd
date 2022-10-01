@@ -21,3 +21,6 @@ func _process(delta):
 	acceleration.y = input.y * 300
 	velocity = velocity + acceleration.rotated(self.rotation)*delta
 	move_and_slide(velocity, Vector2(0, -1))
+	
+	$flame.visible = input.y != 0
+	$flame.frame = rand_range(0, 3)
