@@ -2,9 +2,9 @@ extends BaseMiniGame
 
 var ellapsedTime = 0
 var relativeMarkerPos = -1 # Goes between -1 & 1
-var markerSpeed = 7
+var markerSpeed = 5
 var markerTravelLength = 700 # (x coordinate)
-var markerZero = 400 # (x coordinate)
+var markerZero = 512 # (x coordinate)
 
 var markerState = "RUNNING" # RUNNING / PAUSED / WON
 
@@ -32,8 +32,8 @@ func _process(delta):
 		placeMarker()
 
 func fail():
-	$FailureSound.play()
 	markerState = "PAUSED"
+	$FailureSound.play()
 	$PauseTimer.start(3)
 
 func success():
