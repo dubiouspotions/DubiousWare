@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx-mlg-airhorn-success.mp3-75ccede4dcecb39504cec443a5dfac81.mp3str"
+
+[deps]
+
+source_file="res://minigames/dab/assets/sfx-mlg-airhorn-success.mp3"
+dest_files=[ "res://.import/sfx-mlg-airhorn-success.mp3-75ccede4dcecb39504cec443a5dfac81.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

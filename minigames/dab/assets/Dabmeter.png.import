@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dabmeter.png-738c6b692f03556cedb8a86950baf786.stex"
+path="res://.import/Dabmeter.png-b9f256e0e98110121e6f5e735a6fa3d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/03/assets/Dabmeter.png"
-dest_files=[ "res://.import/Dabmeter.png-738c6b692f03556cedb8a86950baf786.stex" ]
+source_file="res://minigames/dab/assets/Dabmeter.png"
+dest_files=[ "res://.import/Dabmeter.png-b9f256e0e98110121e6f5e735a6fa3d9.stex" ]
 
 [params]
 

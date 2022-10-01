@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Idle Dabman-Sheet.png-e790b9c0516fe52bc781684016d5caf8.stex"
+path="res://.import/Idle Dabman-Sheet.png-b5cf007e86d90d9c04eabc820fa59b3d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/03/assets/dabman/Idle Dabman-Sheet.png"
-dest_files=[ "res://.import/Idle Dabman-Sheet.png-e790b9c0516fe52bc781684016d5caf8.stex" ]
+source_file="res://minigames/dab/assets/dabman/Idle Dabman-Sheet.png"
+dest_files=[ "res://.import/Idle Dabman-Sheet.png-b5cf007e86d90d9c04eabc820fa59b3d.stex" ]
 
 [params]
 
