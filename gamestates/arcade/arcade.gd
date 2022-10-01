@@ -1,3 +1,4 @@
+class_name Arcade 
 extends Node2D
 
 
@@ -11,7 +12,7 @@ var p4
 var debug_level = ""
 
 
-func loadRandomMinigame():
+static func all_games() -> Array:
 	var gamesd = Directory.new()
 	gamesd.open("res://minigames/")
 	gamesd.list_dir_begin()
@@ -22,12 +23,20 @@ func loadRandomMinigame():
 			print("Found minigame "+game_name)
 			gamenames.push_back(game_name)
 		game_name = gamesd.get_next()
+	return gamenames
+
+func loadRandomMinigame():
+	var gamenames = all_games()
 	gamenames.shuffle()
 	var chosen_game = gamenames[0]
 	if debug_level != "":
 		chosen_game = debug_level
 	print("PLAYING minigame "+chosen_game)
-	var scene = load("res://minigames/"+chosen_game+"/puzzle.tscn")
+	
+	var scene = load("res://minigames/" + chosen_game + "/" + chosen_game + ".tscn")
+	if scene == null:
+		scene = load("res://minigames/" + chosen_game + "/puzzle.tscn")
+	assert(scene != null)
 	return scene
 
 func _ready():

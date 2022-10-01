@@ -1,15 +1,7 @@
-class_name BaseMiniGame
-extends Node2D
+extends BaseMiniGame
 
-
-func getPlayerDidWin():
-	return false
-	
-var player_index = "p1"
-
-func get_input_vector() -> Vector2:
-	return Input.get_vector(player_index+"_left", player_index+"_right", player_index+"_up", player_index+"_down")
-
+const train_target = 260
+const train_start = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -17,6 +9,7 @@ func get_input_vector() -> Vector2:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Platform/GameArea/Commuters/Commuter0.duplicate()
 	pass # Replace with function body.
 
 
