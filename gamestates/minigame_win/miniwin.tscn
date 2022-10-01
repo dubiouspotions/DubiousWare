@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gamestates/minigame_win/miniwin.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 428.0
+margin_top = 75.0
+margin_right = 628.0
+margin_bottom = 163.0
+text = "Player 1
+Wins!"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 786.0
+margin_top = 533.0
+margin_right = 1006.0
+margin_bottom = 594.0
+text = "Next game..."
