@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://minigames/spacejump/assets/bg.png" type="Texture" id=1]
 [ext_resource path="res://minigames/spacejump/spacejump.gd" type="Script" id=2]
@@ -21,6 +21,18 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 22, 530.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 530, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 26.25, 524.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 556.5, 28.5 )
 
 [node name="SpaceJump" type="Node2D"]
 script = ExtResource( 2 )
@@ -71,6 +83,24 @@ scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 2 )
 frame = 1
 speed_scale = 4.899
+
+[node name="spacewalls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="spacewalls"]
+position = Vector2( -25, 525 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spacewalls"]
+position = Vector2( 518, 1032 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="spacewalls"]
+position = Vector2( 1042.75, 507.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="spacewalls"]
+position = Vector2( 507.5, -31.5 )
+shape = SubResource( 6 )
 
 [editable path="planets/Planet2"]
 [editable path="planets/Planet3"]
