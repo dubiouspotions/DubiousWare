@@ -44,3 +44,7 @@ func play_next():
 func end():
 	# go back to main menu
 	self.queue_free()
+
+func _input(event):
+	if Input.is_action_pressed("ui_cancel"):
+		end()
