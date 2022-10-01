@@ -1,6 +1,7 @@
-extends Node2D
+extends BaseMiniGame
 
-
+const train_target = 260
+const train_start = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -8,7 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Commuters/Commuter0.duplicate()
+	$Platform/GameArea/Commuters/Commuter0.duplicate()
 	pass # Replace with function body.
 
 

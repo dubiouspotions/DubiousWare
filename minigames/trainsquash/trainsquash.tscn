@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://minigames/trainsquash/trainsquash.gd" type="Script" id=1]
+[ext_resource path="res://minigames/trainsquash/asset/Station%20Back.png" type="Texture" id=2]
+[ext_resource path="res://minigames/trainsquash/asset/TRAIN Back.png" type="Texture" id=3]
+[ext_resource path="res://minigames/trainsquash/asset/TRAIN Door Rt.png" type="Texture" id=4]
+[ext_resource path="res://minigames/trainsquash/asset/STATION Platform.png" type="Texture" id=5]
+[ext_resource path="res://minigames/trainsquash/asset/Passenger MID.png" type="Texture" id=6]
+[ext_resource path="res://minigames/trainsquash/asset/Passenger R.png" type="Texture" id=7]
+[ext_resource path="res://minigames/trainsquash/asset/TRAIN Front.png" type="Texture" id=8]
+[ext_resource path="res://minigames/trainsquash/asset/Commuter.png" type="Texture" id=9]
+[ext_resource path="res://minigames/trainsquash/asset/Passenger L.png" type="Texture" id=10]
+[ext_resource path="res://minigames/trainsquash/asset/PLAYER.png" type="Texture" id=11]
+[ext_resource path="res://minigames/trainsquash/asset/TRAIN Door L.png" type="Texture" id=12]
+
+[node name="TrainSquash" type="Node2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+offset = Vector2( 250, 250 )
+
+[node name="Train" type="Node2D" parent="."]
+position = Vector2( 260, 190 )
+
+[node name="Back" type="Sprite" parent="Train"]
+position = Vector2( -9, -8 )
+texture = ExtResource( 3 )
+
+[node name="CrowdLeft" type="Control" parent="Train"]
+margin_left = -201.0
+margin_top = -43.0
+margin_right = -4.0
+margin_bottom = 21.0
+rect_clip_content = true
+
+[node name="gfx" type="Sprite" parent="Train/CrowdLeft"]
+position = Vector2( 0, 49 )
+texture = ExtResource( 10 )
+offset = Vector2( 247, 0 )
+
+[node name="CrowdRight" type="Control" parent="Train"]
+margin_left = 12.0
+margin_top = -32.0
+margin_right = 208.0
+margin_bottom = 40.0
+rect_clip_content = true
+
+[node name="gfx" type="Sprite" parent="Train/CrowdRight"]
+position = Vector2( 0, 36 )
+texture = ExtResource( 7 )
+offset = Vector2( -65, 0 )
+
+[node name="CrowdCenter" type="Sprite" parent="Train"]
+position = Vector2( -1426, -273 )
+texture = ExtResource( 6 )
+offset = Vector2( 1426, 273 )
+
+[node name="DoorRight" type="Sprite" parent="Train"]
+position = Vector2( 0, 4 )
+texture = ExtResource( 4 )
+offset = Vector2( 16, 0 )
+
+[node name="DoorLeft" type="Sprite" parent="Train"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 12 )
+offset = Vector2( -18, 0 )
+
+[node name="Front" type="Sprite" parent="Train"]
+position = Vector2( 4, -1 )
+texture = ExtResource( 8 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Platform" type="Sprite" parent="."]
+position = Vector2( 0, 204 )
+texture = ExtResource( 5 )
+offset = Vector2( 250, 150 )
+
+[node name="GameArea" type="Control" parent="Platform"]
+margin_left = 16.0
+margin_top = 30.0
+margin_right = 486.0
+margin_bottom = 222.0
+
+[node name="Player" type="Sprite" parent="Platform/GameArea"]
+position = Vector2( 250, 50 )
+texture = ExtResource( 11 )
+
+[node name="Commuters" type="Node2D" parent="Platform/GameArea"]
+position = Vector2( 244, -44 )
+
+[node name="Commuter0" type="Sprite" parent="Platform/GameArea/Commuters"]
+position = Vector2( 0, 46 )
+texture = ExtResource( 9 )
