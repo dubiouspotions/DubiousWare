@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://minigames/vodo/vodo.gd" type="Script" id=1]
 [ext_resource path="res://minigames/vodo/assets/gamejam_0002_doll.png" type="Texture" id=2]
+[ext_resource path="res://minigames/vodo/assets/gamejam_0002_doll_red_eyes.png" type="Texture" id=3]
 [ext_resource path="res://minigames/vodo/assets/gamejam_0003_background.png" type="Texture" id=4]
 [ext_resource path="res://minigames/vodo/assets/gamejam_0001_circle.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "evil",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,14 +35,20 @@ color = Color( 0.482353, 0.482353, 0.67451, 1 )
 position = Vector2( 512, 512 )
 texture = ExtResource( 4 )
 
+[node name="Needles" type="Node2D" parent="."]
+
 [node name="Doll" type="Node2D" parent="."]
 position = Vector2( 512, 200 )
 
 [node name="DollSprite" type="Sprite" parent="Doll"]
+visible = false
 texture = ExtResource( 2 )
 
 [node name="Circle" type="Sprite" parent="Doll"]
 texture = ExtResource( 5 )
+
+[node name="AnimatedDoll" type="AnimatedSprite" parent="Doll"]
+frames = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
