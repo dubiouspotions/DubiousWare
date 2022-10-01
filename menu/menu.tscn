@@ -38,5 +38,9 @@ margin_top = 466.0
 margin_right = 997.0
 margin_bottom = 506.0
 
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 422.0
+margin_bottom = 380.0
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="text_changed" from="DebugLevelText" to="." method="_on_TextEdit_text_changed"]

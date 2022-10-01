@@ -9,7 +9,16 @@ func _ready():
 	if not config:
 		config = Config.new()
 	$DebugLevelText.text = config.debug_level
+	var games = Arcade.all_games()
+	for name in games:
+		add_game_button(name)
 
+func add_game_button(name: String):
+	var button = GameButton.new()
+	button.text = name
+	$GridContainer.add_child(button)
+
+	
 func start_game():
 	print("Start Game")
 

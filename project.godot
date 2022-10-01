@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "Arcade",
+"language": "GDScript",
+"path": "res://gamestates/arcade/arcade.gd"
+}, {
+"base": "Node2D",
 "class": "BaseMiniGame",
 "language": "GDScript",
 "path": "res://shared/base_mini_game.gd"
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Config",
 "language": "GDScript",
 "path": "res://shared/config.gd"
+}, {
+"base": "Button",
+"class": "GameButton",
+"language": "GDScript",
+"path": "res://menu/GameButton.gd"
 } ]
 _global_script_class_icons={
+"Arcade": "",
 "BaseMiniGame": "",
-"Config": ""
+"Config": "",
+"GameButton": ""
 }
 
 [application]
