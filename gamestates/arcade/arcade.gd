@@ -17,11 +17,13 @@ func loadRandomMinigame():
 	var gamenames = []
 	var game_name = gamesd.get_next()
 	while game_name != "":
-		print("Found minigame "+game_name)
-		gamenames.push_back(game_name)
+		if game_name[0] != ".":
+			print("Found minigame "+game_name)
+			gamenames.push_back(game_name)
 		game_name = gamesd.get_next()
 	gamenames.shuffle()
 	var chosen_game = gamenames[0]
+	print("PLAYING minigame "+chosen_game)
 	var scene = load("res://minigames/"+chosen_game+"/puzzle.tscn")
 	return scene
 
