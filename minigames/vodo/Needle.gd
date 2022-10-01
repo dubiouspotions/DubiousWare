@@ -1,7 +1,7 @@
 extends Node2D
 
 export var rotation_speed = 20
-var needle_speed = -400
+var needle_speed = -550
 
 export var STATE = "IDLE" # FLYING / HIT / IDLE_FAIL
 

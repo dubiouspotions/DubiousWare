@@ -2,7 +2,8 @@ extends BaseMiniGame
 
 export var SCORE = 0
 var win_score = 3
-var rotation_speed = 20
+var rotation_speed = 40
+var deg_opening = 14
 
 var _needle = load("res://minigames/vodo/needle_scn.tscn")
 
@@ -35,14 +36,14 @@ func _process(delta):
 		if current_needle.STATE == "FLYING":
 			current_needle.position.y += delta * current_needle.needle_speed
 			if current_needle.position.y < 200:
-				if 90 - int($Doll.rotation_degrees) % 90 < 10 or int($Doll.rotation_degrees) % 90 < 10:
+				if 90 - int($Doll.rotation_degrees) % 90 < deg_opening or int($Doll.rotation_degrees) % 90 < deg_opening:
 					success()
 				else:
 					fail()
 
 func fail():
 	current_needle.fail()
-	$Timer.start(2)
+	$Timer.start(1)
 
 func success():
 	current_needle.success()
