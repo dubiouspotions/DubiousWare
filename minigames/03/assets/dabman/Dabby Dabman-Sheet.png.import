@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/03_bar.png-def46dfafd755f02f376bea77bd7a90e.stex"
+path="res://.import/Dabby Dabman-Sheet.png-a16220bfee20459806f0c72521fbcff2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/03/assets/03_bar.png"
-dest_files=[ "res://.import/03_bar.png-def46dfafd755f02f376bea77bd7a90e.stex" ]
+source_file="res://minigames/03/assets/dabman/Dabby Dabman-Sheet.png"
+dest_files=[ "res://.import/Dabby Dabman-Sheet.png-a16220bfee20459806f0c72521fbcff2.stex" ]
 
 [params]
 
