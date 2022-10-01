@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://minigames/spacejump/assets/bg.png" type="Texture" id=1]
 [ext_resource path="res://minigames/spacejump/spacejump.gd" type="Script" id=2]
@@ -21,6 +21,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="Gradient" id=7]
+colors = PoolColorArray( 1, 0, 0, 1, 1, 1, 1, 0 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 22, 530.5 )
@@ -66,9 +69,10 @@ texture = ExtResource( 4 )
 
 [node name="PlayerShip" type="KinematicBody2D" parent="."]
 position = Vector2( 68, 439 )
+rotation = 1.5708
 script = ExtResource( 7 )
 
-[node name="Ship" type="Sprite" parent="PlayerShip"]
+[node name="sprite" type="Sprite" parent="PlayerShip"]
 position = Vector2( -3.8147e-06, -5 )
 scale = Vector2( 0.566133, 0.566133 )
 texture = ExtResource( 6 )
@@ -83,6 +87,30 @@ scale = Vector2( 0.554005, 0.554005 )
 frames = SubResource( 2 )
 frame = 1
 speed_scale = 4.899
+
+[node name="explosion" type="CPUParticles2D" parent="PlayerShip"]
+emitting = false
+amount = 2005
+preprocess = 0.5
+randomness = 0.53
+emission_shape = 1
+emission_sphere_radius = 48.92
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 59.38
+initial_velocity_random = 0.18
+angular_velocity = 528.43
+angular_velocity_random = 1.0
+radial_accel = 0.94
+radial_accel_random = 1.0
+angle = 8.5
+angle_random = 0.48
+scale_amount = 5.09
+scale_amount_random = 0.77
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 7 )
+hue_variation = 0.15
+hue_variation_random = 0.68
 
 [node name="spacewalls" type="StaticBody2D" parent="."]
 
