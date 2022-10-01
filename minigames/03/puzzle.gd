@@ -6,7 +6,11 @@ var markerSpeed = 7
 var markerTravelLength = 700 # (x coordinate)
 var markerZero = 400 # (x coordinate)
 
+var markerState = "RUNNING" # RUNNING / PAUSED / WON
+
 func getPlayerDidWin():
+	if markerState != "WON":
+		return false
 	return true
 
 # Called when the node enters the scene tree for the first time.
@@ -16,26 +20,26 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed(self.player_index+"_left"):
-		$Player.translate(Vector2(-delta*400, 0))
-	if Input.is_action_pressed(self.player_index+"_right"):
-		$Player.translate(Vector2(delta*400, 0))
-	if Input.is_action_pressed(self.player_index+"_up"):
-		$Player.translate(Vector2(0, -delta*400))
-	if Input.is_action_pressed(self.player_index+"_down"):
-		$Player.translate(Vector2(0, delta*400))
-	if Input.is_action_pressed(self.player_index+"_action"):
-		print(str(delta)+" lol "+self.player_index)
-	ellapsedTime += delta
-	relativeMarkerPos = cos(ellapsedTime * markerSpeed + PI)
-	placeMarker()
+	if Input.is_action_just_pressed(self.player_index+"_action"):
+		if abs(relativeMarkerPos) < 0.1:
+			success()
+		else:
+			fail()
+	if markerState == "RUNNING":
+		ellapsedTime += delta
+		relativeMarkerPos = cos(ellapsedTime * markerSpeed + PI)
+		placeMarker()
 
 func fail():
-	print("FAIL!")
+	markerState = "PAUSED"
+	$PauseTimer.start(3)
 
 func success():
-	print("SUCCESS!")
+	markerState = "WON"
 
 func placeMarker():
 	$"Control/03Marker".position.x = markerZero + relativeMarkerPos * 0.5 * markerTravelLength
-	
+
+func _on_PauseTimer_timeout():
+	if markerState == "PAUSED":
+		markerState = "RUNNING"
