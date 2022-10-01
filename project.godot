@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "BaseMiniGame",
 "language": "GDScript",
 "path": "res://shared/base_mini_game.gd"
+}, {
+"base": "Resource",
+"class": "Config",
+"language": "GDScript",
+"path": "res://shared/config.gd"
 } ]
 _global_script_class_icons={
-"BaseMiniGame": ""
+"BaseMiniGame": "",
+"Config": ""
 }
 
 [application]

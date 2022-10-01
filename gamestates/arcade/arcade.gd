@@ -8,6 +8,7 @@ var p1
 var p2
 var p3
 var p4
+var debug_level = ""
 
 
 func loadRandomMinigame():
@@ -23,6 +24,8 @@ func loadRandomMinigame():
 		game_name = gamesd.get_next()
 	gamenames.shuffle()
 	var chosen_game = gamenames[0]
+	if debug_level != "":
+		chosen_game = debug_level
 	print("PLAYING minigame "+chosen_game)
 	var scene = load("res://minigames/"+chosen_game+"/puzzle.tscn")
 	return scene
