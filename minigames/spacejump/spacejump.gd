@@ -1,10 +1,8 @@
 extends BaseMiniGame
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+func getPlayerDidWin():
+	return $PlayerShip.are_you_winning_son
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
