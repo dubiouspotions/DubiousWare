@@ -1,4 +1,4 @@
-extends Sprite
+extends StaticBody2D
 
 
 # Declare member variables here. Examples:
