@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://minigames/01/puzzle.tscn")
+	get_tree().change_scene("res://gamestates/arcade/arcade.tscn")
