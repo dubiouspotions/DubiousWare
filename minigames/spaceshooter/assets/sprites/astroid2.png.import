@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ship.png-7d2e4ead07b1b2d38a063ad7441ed5aa.stex"
+path="res://.import/astroid2.png-cb925d14e6036235a57377bfdd81e341.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/04/assets/sprites/ship.png"
-dest_files=[ "res://.import/ship.png-7d2e4ead07b1b2d38a063ad7441ed5aa.stex" ]
+source_file="res://minigames/spaceshooter/assets/sprites/astroid2.png"
+dest_files=[ "res://.import/astroid2.png-cb925d14e6036235a57377bfdd81e341.stex" ]
 
 [params]
 
