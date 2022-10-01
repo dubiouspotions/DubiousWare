@@ -3,6 +3,4 @@
 export_presets.cfg
 .mono/
 .idea/
-*.csproj
-*.sln
 .DS_Store

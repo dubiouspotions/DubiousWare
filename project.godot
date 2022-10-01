@@ -29,17 +29,29 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://shared/config.gd"
 }, {
+"base": "Node2D",
+"class": "Game",
+"language": "GDScript",
+"path": "res://shared/game.gd"
+}, {
 "base": "Button",
 "class": "GameButton",
 "language": "GDScript",
 "path": "res://menu/GameButton.gd"
+}, {
+"base": "Node",
+"class": "Player",
+"language": "GDScript",
+"path": "res://shared/player.gd"
 } ]
 _global_script_class_icons={
 "Arcade": "",
 "BaseMiniGame": "",
 "Commuter": "",
 "Config": "",
-"GameButton": ""
+"Game": "",
+"GameButton": "",
+"Player": ""
 }
 
 [application]
