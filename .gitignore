@@ -2,3 +2,6 @@
 *.translation
 export_presets.cfg
 .mono/
+.idea/
+*.csproj
+*.sln

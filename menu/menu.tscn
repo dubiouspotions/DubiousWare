@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://countdown/Countdown.tscn" type="PackedScene" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -20,5 +21,13 @@ margin_top = 46.0
 margin_right = 664.0
 margin_bottom = 97.0
 text = "DubiousWare"
+
+[node name="Countdown" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.501
+anchor_right = 0.501
+margin_left = -511.024
+margin_top = 73.0
+margin_right = 512.976
+margin_bottom = 223.0
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
