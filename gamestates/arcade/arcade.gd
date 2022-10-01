@@ -33,8 +33,8 @@ func loadRandomMinigame():
 func _ready():
 	randomize()
 	var screen_size = get_viewport_rect().size
-	var mg_scale = 0.3 # Minigame scale factor
-	var mg_size = Vector2(800 * mg_scale, 800 * mg_scale)
+	var mg_scale = 0.25 # Minigame scale factor
+	var mg_size = Vector2(1024 * mg_scale, 1024 * mg_scale)
 	var n_games = Vector2(2, 2)
 	
 	var padding = Vector2(

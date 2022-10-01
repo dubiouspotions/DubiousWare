@@ -41,7 +41,7 @@ func success():
 	markerState = "WON"
 
 func placeMarker():
-	$"Control/03Marker".position.x = markerZero + relativeMarkerPos * 0.5 * markerTravelLength
+	$"Control/Dabarrow".position.x = markerZero + relativeMarkerPos * 0.5 * markerTravelLength
 
 func _on_PauseTimer_timeout():
 	if markerState == "PAUSED":
