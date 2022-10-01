@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://minigames/sadseal/assets/sprites/sad01.png" type="Texture" id=1]
 [ext_resource path="res://minigames/04/assets/sprites/bg.png" type="Texture" id=2]
-[ext_resource path="res://minigames/01/puzzle.gd" type="Script" id=3]
+[ext_resource path="res://minigames/sadseal/sadseal.gd" type="Script" id=3]
 [ext_resource path="res://minigames/sadseal/assets/sprites/sad02.png" type="Texture" id=4]
 [ext_resource path="res://minigames/sadseal/assets/sprites/cry.png" type="Texture" id=5]
+[ext_resource path="res://fonts/BarlowSemiCondensed-SemiBold.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -19,6 +20,27 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="DynamicFont" id=2]
+size = 90
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "pulse"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 0.7, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -32,8 +54,47 @@ scale = Vector2( 9.10156, 7.85156 )
 texture = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 598, 485 )
+position = Vector2( 598, 513 )
 scale = Vector2( 0.401163, 0.401163 )
 frames = SubResource( 1 )
 animation = "sad"
 playing = true
+
+[node name="try" type="Label" parent="."]
+margin_top = 26.0
+margin_right = 1167.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 2 )
+text = "Try not to cry"
+align = 1
+valign = 1
+
+[node name="monster" type="Label" parent="."]
+margin_top = 26.0
+margin_right = 1167.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 2 )
+text = "Oh, no, you monster!"
+align = 1
+valign = 1
+
+[node name="cry" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.14996
+margin_top = 840.938
+margin_right = 1171.15
+margin_bottom = 974.938
+rect_scale = Vector2( 0.941963, 0.941963 )
+rect_pivot_offset = Vector2( 572, 75 )
+custom_fonts/font = SubResource( 2 )
+text = "Press to cry"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../cry")
+method_call_mode = 1
+anims/pulse = SubResource( 3 )
