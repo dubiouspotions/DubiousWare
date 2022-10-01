@@ -1,0 +1,76 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://minigames/spacejump/assets/bg.png" type="Texture" id=1]
+[ext_resource path="res://minigames/spacejump/spacejump.gd" type="Script" id=2]
+[ext_resource path="res://minigames/spacejump/assets/planets/Planet-02-V1-512x512px.png" type="Texture" id=3]
+[ext_resource path="res://minigames/spacejump/assets/planets/Planet-01-V2-512x512px.png" type="Texture" id=4]
+[ext_resource path="res://minigames/spacejump/Planet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://minigames/spacejump/assets/ship.png" type="Texture" id=6]
+[ext_resource path="res://minigames/spacejump/PlayerShip.gd" type="Script" id=7]
+[ext_resource path="res://minigames/spacejump/assets/flame02.png" type="Texture" id=9]
+[ext_resource path="res://minigames/spacejump/assets/flame03.png" type="Texture" id=10]
+[ext_resource path="res://minigames/spacejump/assets/flame01.png" type="Texture" id=11]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 37.6962
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="SpaceJump" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 511, 514 )
+texture = ExtResource( 1 )
+
+[node name="planets" type="Node2D" parent="."]
+
+[node name="Planet" parent="planets" instance=ExtResource( 5 )]
+
+[node name="Planet2" parent="planets" instance=ExtResource( 5 )]
+position = Vector2( 302, 772 )
+r_speed = 1.199
+r_offset = 3.753
+
+[node name="sprite" parent="planets/Planet2" index="0"]
+position = Vector2( -6.10352e-05, -1 )
+scale = Vector2( 0.397705, 0.397705 )
+texture = ExtResource( 3 )
+
+[node name="Planet3" parent="planets" instance=ExtResource( 5 )]
+position = Vector2( 739, 361 )
+distance = 116
+r_speed = -1.467
+r_offset = 0.441
+
+[node name="sprite" parent="planets/Planet3" index="0"]
+texture = ExtResource( 4 )
+
+[node name="PlayerShip" type="KinematicBody2D" parent="."]
+position = Vector2( 68, 439 )
+script = ExtResource( 7 )
+
+[node name="Ship" type="Sprite" parent="PlayerShip"]
+position = Vector2( -1, -1 )
+scale = Vector2( 0.369767, 0.369767 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerShip"]
+shape = SubResource( 1 )
+
+[node name="flame" type="AnimatedSprite" parent="PlayerShip"]
+position = Vector2( -1, 72 )
+rotation = -1.5708
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 2 )
+frame = 1
+speed_scale = 4.899
+
+[editable path="planets/Planet2"]
+[editable path="planets/Planet3"]
