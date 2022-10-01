@@ -4,7 +4,7 @@ var config:Config
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"Countdown".connect("countdown_done",self,"start_game")
+
 	config = load("user://config.tres")
 	if not config:
 		config = Config.new()
