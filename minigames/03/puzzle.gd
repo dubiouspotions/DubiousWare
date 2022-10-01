@@ -1,5 +1,10 @@
 extends BaseMiniGame
 
+var ellapsedTime = 0
+var relativeMarkerPos = -1 # Goes between -1 & 1
+var markerSpeed = 7
+var markerTravelLength = 700 # (x coordinate)
+var markerZero = 400 # (x coordinate)
 
 func getPlayerDidWin():
 	return true
@@ -21,3 +26,16 @@ func _process(delta):
 		$Player.translate(Vector2(0, delta*400))
 	if Input.is_action_pressed(self.player_index+"_action"):
 		print(str(delta)+" lol "+self.player_index)
+	ellapsedTime += delta
+	relativeMarkerPos = cos(ellapsedTime * markerSpeed + PI)
+	placeMarker()
+
+func fail():
+	print("FAIL!")
+
+func success():
+	print("SUCCESS!")
+
+func placeMarker():
+	$"Control/03Marker".position.x = markerZero + relativeMarkerPos * 0.5 * markerTravelLength
+	
