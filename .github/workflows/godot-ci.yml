@@ -26,4 +26,6 @@ jobs:
           name: web
           path: ./build/web/
       - name: Itch.io
+        env: 
+          BUTLER_API_KEY: ${{ secret.BUTLER_API_KEY }}
         run: butler push ./build/web ${ITCHIO_USERNAME}/${ITCHIO_GAME}:web
