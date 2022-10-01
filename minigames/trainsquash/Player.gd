@@ -13,4 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var input = owner.get_input_vector()
+
+	self.translate(input*2)
+	var train = owner.get_node("Train")
+	var doors = train.global_position
+	look_at(doors)
+	rotate(PI/2)

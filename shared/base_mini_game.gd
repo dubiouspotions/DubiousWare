@@ -7,7 +7,7 @@ func getPlayerDidWin():
 	
 var player_index = "p1"
 
-func get_input_vector():
+func get_input_vector() -> Vector2:
 	return Input.get_vector(player_index+"_left", player_index+"_right", player_index+"_up", player_index+"_down")
 
 # Declare member variables here. Examples:
