@@ -20,15 +20,15 @@ func _ready():
 
 func gen_crowd():
 	var crowd = $Platform/GameArea/Commuters
-	var c0 = $Platform/GameArea/Commuters/Commuter0
-	for i in range(0, 70):
-		var commuter = c0.duplicate()
-		#crowd.call_deferred("add_child", commuter)
-		crowd.add_child(commuter)
+	var cs = load("res://minigames/trainsquash/Commuter.tscn")
+	for i in range(0, 2):
+		var commuter = cs.instance()
+		commuter.game = self
+		
 		commuter.position = Vector2(
 			rand_range(-50, 50.0),
 			rand_range(46.0, 200.0)
 		)
-		commuter.owner = owner
+		crowd.add_child(commuter)
 		printt(commuter.position)
 		
