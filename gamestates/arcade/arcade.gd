@@ -46,7 +46,7 @@ func _ready():
 	var n_games = Vector2(2, 2)
 	
 	var scene = loadRandomMinigame()
-	
+	 
 	for p in game.players:
 		var split = scene.instance()
 		split.transform = split.transform.scaled(Vector2(mg_scale, mg_scale))
@@ -55,6 +55,7 @@ func _ready():
 		find_node(p.index).add_child(split)
 	
 	$Countdown.connect("countdown_done",self,"end_game")
+	update_score_labels()
 
 func end_game():
 	for p in game.players:
@@ -64,7 +65,12 @@ func end_game():
 		if won:
 			p.add_point()
 		print("Won? ", p.index, won, p.score)
+	update_score_labels()
 	game.play_next()
+
+func update_score_labels():
+	for label in $scores.get_children():
+		label.text = str(game.find_node(label.name, true, false).score)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

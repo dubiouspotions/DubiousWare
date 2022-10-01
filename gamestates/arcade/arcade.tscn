@@ -46,7 +46,49 @@ margin_bottom = 558.0
 rect_pivot_offset = Vector2( 166, 142 )
 
 [node name="Countdown" parent="." instance=ExtResource( 3 )]
-margin_left = 68.0
+margin_left = 405.0
 margin_top = 239.0
-margin_right = 978.0
+margin_right = 642.0
 margin_bottom = 327.0
+
+[node name="scores" type="Node2D" parent="."]
+
+[node name="p1" type="Label" parent="scores"]
+margin_left = 81.0
+margin_top = 247.0
+margin_right = 101.0
+margin_bottom = 261.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="p2" type="Label" parent="scores"]
+margin_left = 914.0
+margin_top = 250.0
+margin_right = 934.0
+margin_bottom = 264.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="p3" type="Label" parent="scores"]
+margin_left = 81.0
+margin_top = 532.0
+margin_right = 101.0
+margin_bottom = 546.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="p4" type="Label" parent="scores"]
+margin_left = 914.0
+margin_top = 515.0
+margin_right = 934.0
+margin_bottom = 529.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
