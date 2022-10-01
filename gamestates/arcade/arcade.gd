@@ -10,6 +10,7 @@ var p2
 var p3
 var p4
 var debug_level = ""
+var game
 
 
 static func all_games() -> Array:
@@ -84,6 +85,7 @@ func end_game():
 	var ps = [p1, p2, p3, p4]
 	for p in ps:
 		print("Won? ", p.player_index, p.getPlayerDidWin())
+	game.play_next()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

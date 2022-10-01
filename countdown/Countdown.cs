@@ -34,6 +34,6 @@ public class Countdown : RichTextLabel
 
 	private void UpdateText()
 	{
-		BbcodeText = "[center]" + (seconds > 0 ? $"{seconds}" : "GO!") + "[/center]";
+		BbcodeText = "[center]" + (seconds > 0 ? $"{seconds}" : "END!") + "[/center]";
 	}
 }

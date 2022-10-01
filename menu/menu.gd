@@ -18,17 +18,14 @@ func add_game_button(name: String):
 	button.text = name
 	$GridContainer.add_child(button)
 
-	
-func start_game():
-	print("Start Game")
-
 func save_config():
 	ResourceSaver.save("user://config.tres", config)
 
 func _on_Button_pressed():
-	var arcade_scene = preload("res://gamestates/arcade/arcade.tscn").instance()
-	arcade_scene.debug_level = $DebugLevelText.text
-	get_tree().get_root().add_child(arcade_scene)
+	var game = Game.new()
+	game.debug_level = $DebugLevelText.text
+	get_tree().get_root().add_child(game)
+	game.start()
 	
 
 
