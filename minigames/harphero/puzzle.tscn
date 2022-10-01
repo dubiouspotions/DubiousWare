@@ -1,0 +1,83 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://minigames/harphero/harphero.gd" type="Script" id=1]
+[ext_resource path="res://minigames/harphero/assets/Play Animation - Sprite Sheet.png" type="Texture" id=2]
+[ext_resource path="res://minigames/harphero/assets/Thee Line.png" type="Texture" id=3]
+[ext_resource path="res://minigames/harphero/assets/The Harper.png" type="Texture" id=4]
+[ext_resource path="res://minigames/harphero/assets/Backdrop.png" type="Texture" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 212, 91 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 212, 0, 212, 91 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 424, 0, 212, 91 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 636, 0, 212, 91 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 848, 0, 212, 91 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1060, 0, 212, 91 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1272, 0, 212, 91 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 1024.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.482353, 0.482353, 0.67451, 1 )
+
+[node name="Backdrop" type="Sprite" parent="Control"]
+position = Vector2( 512, 512 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="TheHarper" type="Sprite" parent="Control"]
+position = Vector2( 303, 525 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="TheeLine" type="Sprite" parent="Control"]
+position = Vector2( 830, 444 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 335, 499 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 8 )
+playing = true
