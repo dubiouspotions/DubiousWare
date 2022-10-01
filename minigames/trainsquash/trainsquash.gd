@@ -1,21 +1,32 @@
 extends BaseMiniGame
 
 const train_target = 260
-const train_start = 0
+const train_enter = 1000
+const train_exit = -1000
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
+var gametime = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gen_crowd()
+	$Train.position.x = train_enter
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	gametime += delta
+	
+	var train_speed = 2000.0
+	if $Train.position.x > train_target:
+		$Train.position.x -= train_speed * delta
+	else:
+		$Train.position.x = train_target
+	
+	
 
 
 func gen_crowd():
