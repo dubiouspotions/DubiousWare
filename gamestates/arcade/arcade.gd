@@ -59,25 +59,25 @@ func _ready():
 	p1.player_index = "p1"
 	p1.transform = p1.transform.scaled(Vector2(mg_scale, mg_scale))
 	p1.position = Vector2(padding.x, padding.y)
-	get_tree().get_root().add_child(p1)
+	add_child(p1)
 
 	p2 = scene.instance()
 	p2.player_index = "p2"
 	p2.transform = p2.transform.scaled(Vector2(mg_scale, mg_scale))
 	p2.position = Vector2(padding.x * 2 + mg_size.x, padding.y)
-	get_tree().get_root().add_child(p2)
+	add_child(p2)
 
 	p3 = scene.instance()
 	p3.player_index = "p3"
 	p3.transform = p3.transform.scaled(Vector2(mg_scale, mg_scale))
 	p3.position = Vector2(padding.x, padding.y * 2 + mg_size.y)
-	get_tree().get_root().add_child(p3)
+	add_child(p3)
 
 	p4 = scene.instance()
 	p4.player_index = "p4"
 	p4.transform = p4.transform.scaled(Vector2(mg_scale, mg_scale))
 	p4.position = Vector2(padding.x * 2 + mg_size.x, padding.y * 2 + mg_size.y)
-	get_tree().get_root().add_child(p4)
+	add_child(p4)
 	
 	$Countdown.connect("countdown_done",self,"end_game")
 

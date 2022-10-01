@@ -22,6 +22,7 @@ func start():
 	
 func play_next():
 	get_tree().get_root().remove_child(current_arcade)
+	current_arcade.queue_free()
 	current_arcade = null
 	
 	self.debug_level = ""
