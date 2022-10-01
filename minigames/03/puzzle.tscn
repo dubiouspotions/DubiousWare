@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://minigames/03/assets/03_bar.png" type="Texture" id=1]
+[ext_resource path="res://minigames/03/assets/sfx-mlg-airhorn-failure.mp3" type="AudioStream" id=2]
 [ext_resource path="res://minigames/03/puzzle.gd" type="Script" id=3]
 [ext_resource path="res://minigames/03/assets/03_marker.png" type="Texture" id=4]
-[ext_resource path="res://minigames/03/assets/03_star_2.png" type="Texture" id=5]
-[ext_resource path="res://minigames/03/assets/03_star_1.png" type="Texture" id=6]
+[ext_resource path="res://minigames/03/assets/sfx-mlg-airhorn-success.mp3" type="AudioStream" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -27,16 +35,18 @@ texture = ExtResource( 1 )
 position = Vector2( 400, 280 )
 texture = ExtResource( 4 )
 
-[node name="03Star1" type="Sprite" parent="Control"]
-position = Vector2( 344, 507 )
-texture = ExtResource( 6 )
-
-[node name="03Star2" type="Sprite" parent="Control"]
-position = Vector2( 344, 507 )
-texture = ExtResource( 5 )
-
 [node name="PauseTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="FailureSound" type="AudioStreamPlayer" parent="."]
+pause_mode = 1
+stream = ExtResource( 2 )
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
 
 [connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]
