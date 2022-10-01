@@ -14,6 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	return
 	rotation = 0
 	$Sprite.offset.y = rand_range(-2.0, 2.0)
 
