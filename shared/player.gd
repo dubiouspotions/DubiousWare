@@ -17,6 +17,8 @@ func _init(idx):
 func _ready():
 	pass # Replace with function body.
 
+func add_point():
+	score = score + 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -3,16 +3,19 @@ class_name Game
 
 export var debug_level: String = ""
 var current_arcade
+var players = []
 
 func _init():
 	self.name = "Game"
-	var players = Node.new()
-	players.name = "Players"
-	self.add_child(players)
-	players.add_child(Player.new("p1"))
-	players.add_child(Player.new("p2"))
-	players.add_child(Player.new("p3"))
-	players.add_child(Player.new("p4"))
+	var playersNode = Node.new()
+	playersNode.name = "Players"
+	self.add_child(playersNode)
+	playersNode.add_child(Player.new("p1"))
+	playersNode.add_child(Player.new("p2"))
+	playersNode.add_child(Player.new("p3"))
+	playersNode.add_child(Player.new("p4"))
+	players = playersNode.get_children()
+	
 
 func start():
 	current_arcade = preload("res://gamestates/arcade/arcade.tscn").instance()

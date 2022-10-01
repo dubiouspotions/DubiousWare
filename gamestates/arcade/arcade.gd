@@ -5,10 +5,6 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var p1
-var p2
-var p3
-var p4
 var debug_level = ""
 var game
 
@@ -42,49 +38,32 @@ func loadRandomMinigame():
 
 func _ready():
 	randomize()
+	
+
 	var screen_size = get_viewport_rect().size
 	var mg_scale = 0.25 # Minigame scale factor
 	var mg_size = Vector2(1024 * mg_scale, 1024 * mg_scale)
 	var n_games = Vector2(2, 2)
 	
-	var padding = Vector2(
-		(screen_size.x - (n_games.x * mg_size.x))/3,
-		(screen_size.y - (n_games.y * mg_size.y))/3
-	)
-	
 	var scene = loadRandomMinigame()
-	# var scene = load("res://minigames/03/puzzle.tscn")
-
-	p1 = scene.instance()
-	p1.player_index = "p1"
-	p1.transform = p1.transform.scaled(Vector2(mg_scale, mg_scale))
-	p1.position = Vector2(padding.x, padding.y)
-	add_child(p1)
-
-	p2 = scene.instance()
-	p2.player_index = "p2"
-	p2.transform = p2.transform.scaled(Vector2(mg_scale, mg_scale))
-	p2.position = Vector2(padding.x * 2 + mg_size.x, padding.y)
-	add_child(p2)
-
-	p3 = scene.instance()
-	p3.player_index = "p3"
-	p3.transform = p3.transform.scaled(Vector2(mg_scale, mg_scale))
-	p3.position = Vector2(padding.x, padding.y * 2 + mg_size.y)
-	add_child(p3)
-
-	p4 = scene.instance()
-	p4.player_index = "p4"
-	p4.transform = p4.transform.scaled(Vector2(mg_scale, mg_scale))
-	p4.position = Vector2(padding.x * 2 + mg_size.x, padding.y * 2 + mg_size.y)
-	add_child(p4)
+	
+	for p in game.players:
+		var split = scene.instance()
+		split.transform = split.transform.scaled(Vector2(mg_scale, mg_scale))
+		split.player = p
+		split.player_index = p.index
+		find_node(p.index).add_child(split)
 	
 	$Countdown.connect("countdown_done",self,"end_game")
 
 func end_game():
-	var ps = [p1, p2, p3, p4]
-	for p in ps:
-		print("Won? ", p.player_index, p.getPlayerDidWin())
+	for p in game.players:
+		var split = $splits.find_node(p.index)
+		var splitgame = split.get_child(0)
+		var won = splitgame.getPlayerDidWin()
+		if won:
+			p.add_point()
+		print("Won? ", p.index, won, p.score)
 	game.play_next()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
