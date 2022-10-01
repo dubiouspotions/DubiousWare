@@ -6,15 +6,19 @@ extends KinematicBody2D
 # var b = "text"
 var acceleration = Vector2()
 var velocity = Vector2()
-var rotation_speed = 10
+const rotation_speed = 10
+export var are_you_winning_son = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+func lose():
+	are_you_winning_son = false
+	self.visible = false
+	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	var input = $"..".get_input_vector()
 	self.rotation = self.rotation + input.x * 5 * delta
 	
@@ -25,4 +29,6 @@ func _process(delta):
 	$flame.visible = input.y != 0
 	$flame.frame = randi() % 3
 	
+	if get_slide_count() > 0:
+		lose()
 	
