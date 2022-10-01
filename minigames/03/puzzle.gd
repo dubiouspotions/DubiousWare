@@ -2,7 +2,7 @@ extends BaseMiniGame
 
 var ellapsedTime = 0
 var relativeMarkerPos = -1 # Goes between -1 & 1
-var markerSpeed = 5
+var markerSpeed = 4
 var markerTravelLength = 700 # (x coordinate)
 var markerZero = 512 # (x coordinate)
 
@@ -34,15 +34,18 @@ func _process(delta):
 func fail():
 	markerState = "PAUSED"
 	$FailureSound.play()
+	$dabber.play("sad")
 	$PauseTimer.start(3)
 
 func success():
 	$SuccessSound.play()
+	$dabber.play("dab")
 	markerState = "WON"
 
 func placeMarker():
 	$"Control/Dabarrow".position.x = markerZero + relativeMarkerPos * 0.5 * markerTravelLength
 
 func _on_PauseTimer_timeout():
-	if markerState == "PAUSED":
+	if markerState == "PAUSED":	
+		$dabber.play("default")
 		markerState = "RUNNING"
