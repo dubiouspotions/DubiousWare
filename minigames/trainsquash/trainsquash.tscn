@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://minigames/trainsquash/trainsquash.gd" type="Script" id=1]
 [ext_resource path="res://minigames/trainsquash/asset/Station%20Back.png" type="Texture" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://minigames/trainsquash/asset/Passenger L.png" type="Texture" id=10]
 [ext_resource path="res://minigames/trainsquash/asset/PLAYER.png" type="Texture" id=11]
 [ext_resource path="res://minigames/trainsquash/asset/TRAIN Door L.png" type="Texture" id=12]
+[ext_resource path="res://minigames/trainsquash/Commuter.gd" type="Script" id=13]
+[ext_resource path="res://minigames/trainsquash/CrowdCenter.gd" type="Script" id=14]
+[ext_resource path="res://minigames/trainsquash/Player.gd" type="Script" id=15]
 
 [node name="TrainSquash" type="Node2D"]
 scale = Vector2( 2, 2 )
@@ -53,9 +56,8 @@ texture = ExtResource( 7 )
 offset = Vector2( -65, 0 )
 
 [node name="CrowdCenter" type="Sprite" parent="Train"]
-position = Vector2( -1426, -273 )
 texture = ExtResource( 6 )
-offset = Vector2( 1426, 273 )
+script = ExtResource( 14 )
 
 [node name="DoorRight" type="Sprite" parent="Train"]
 position = Vector2( 0, 4 )
@@ -86,6 +88,7 @@ margin_bottom = 222.0
 [node name="Player" type="Sprite" parent="Platform/GameArea"]
 position = Vector2( 250, 50 )
 texture = ExtResource( 11 )
+script = ExtResource( 15 )
 
 [node name="Commuters" type="Node2D" parent="Platform/GameArea"]
 position = Vector2( 244, -44 )
@@ -93,3 +96,4 @@ position = Vector2( 244, -44 )
 [node name="Commuter0" type="Sprite" parent="Platform/GameArea/Commuters"]
 position = Vector2( 0, 46 )
 texture = ExtResource( 9 )
+script = ExtResource( 13 )
