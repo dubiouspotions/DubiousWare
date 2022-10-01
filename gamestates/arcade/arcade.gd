@@ -10,9 +10,23 @@ var p3
 var p4
 
 
-# Called when the node enters the scene tree for the first time.
+func loadRandomMinigame():
+	var gamesd = Directory.new()
+	gamesd.open("res://minigames/")
+	gamesd.list_dir_begin()
+	var gamenames = []
+	var game_name = gamesd.get_next()
+	while game_name != "":
+		print("Found minigame "+game_name)
+		gamenames.push_back(game_name)
+		game_name = gamesd.get_next()
+	gamenames.shuffle()
+	var scene = load("res://minigames/"+gamenames[0]+"/puzzle.tscn")
+	return scene
+
 func _ready():
-	var scene = preload("res://minigames/01/puzzle.tscn")
+	randomize()
+	var scene = loadRandomMinigame()
 	p1 = scene.instance()
 	p1.player_index = "p1"
 	get_tree().get_root().add_child(p1)
