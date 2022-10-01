@@ -6,7 +6,7 @@ env:
   EXPORT_NAME: Dubious Arcade
 
 jobs:
-  export-web:
+  deploy-web:
     name: Web Export
     runs-on: ubuntu-latest
     container:
@@ -25,3 +25,5 @@ jobs:
         with:
           name: web
           path: ./build/web/
+      - name: Itch.io
+        run: butler push ./build/web ${ITCHIO_USERNAME}/${ITCHIO_GAME}:web
