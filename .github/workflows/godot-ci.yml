@@ -2,7 +2,7 @@ name: "godot-ci export"
 on: push
 
 env:
-  GODOT_VERSION: 3.2.1
+  GODOT_VERSION: 3.5.1
   EXPORT_NAME: Dubious Arcade
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup
         run: |
           mkdir -v -p build/web ~/.local/share/godot/templates
-          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable.mono ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Web Build
         run: godot -v --export "HTML5" ./build/web/index.html
       - name: Upload Artifact
