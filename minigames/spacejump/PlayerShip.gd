@@ -23,4 +23,4 @@ func _process(delta):
 	move_and_slide(velocity, Vector2(0, -1))
 	
 	$flame.visible = input.y != 0
-	$flame.frame = rand_range(0, 3)
+	$flame.frame = randi() % 3
