@@ -21,7 +21,8 @@ func loadRandomMinigame():
 		gamenames.push_back(game_name)
 		game_name = gamesd.get_next()
 	gamenames.shuffle()
-	var scene = load("res://minigames/"+gamenames[0]+"/puzzle.tscn")
+	var chosen_game = gamenames[0]
+	var scene = load("res://minigames/"+chosen_game+"/puzzle.tscn")
 	return scene
 
 func _ready():
