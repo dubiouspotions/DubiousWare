@@ -12,7 +12,7 @@
 [ext_resource path="res://minigames/spacejump/assets/flame01.png" type="Texture" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 37.6962
+radius = 61.6604
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -69,17 +69,17 @@ position = Vector2( 68, 439 )
 script = ExtResource( 7 )
 
 [node name="Ship" type="Sprite" parent="PlayerShip"]
-position = Vector2( -1, -1 )
-scale = Vector2( 0.369767, 0.369767 )
+position = Vector2( -3.8147e-06, -5 )
+scale = Vector2( 0.566133, 0.566133 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerShip"]
 shape = SubResource( 1 )
 
 [node name="flame" type="AnimatedSprite" parent="PlayerShip"]
-position = Vector2( -1, 72 )
+position = Vector2( -2, 107 )
 rotation = -1.5708
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.554005, 0.554005 )
 frames = SubResource( 2 )
 frame = 1
 speed_scale = 4.899

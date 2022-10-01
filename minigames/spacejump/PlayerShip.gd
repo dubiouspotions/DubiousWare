@@ -24,3 +24,5 @@ func _process(delta):
 	
 	$flame.visible = input.y != 0
 	$flame.frame = randi() % 3
+	
+	
