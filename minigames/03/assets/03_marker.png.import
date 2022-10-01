@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_01.png-7326d8c624e4cb748fbd113969245c85.stex"
+path="res://.import/03_marker.png-499b08363e36f1bb929882ba3c8ba780.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/03/assets/sprites/player/player_01.png"
-dest_files=[ "res://.import/player_01.png-7326d8c624e4cb748fbd113969245c85.stex" ]
+source_file="res://minigames/03/assets/03_marker.png"
+dest_files=[ "res://.import/03_marker.png-499b08363e36f1bb929882ba3c8ba780.stex" ]
 
 [params]
 

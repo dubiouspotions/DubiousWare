@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_18.png-10b597b598f730b619aee40306265233.stex"
+path="res://.import/Dabarrow.png-dc306c4ae8b4a9c31f0dded0419167cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/03/assets/sprites/player/player_18.png"
-dest_files=[ "res://.import/player_18.png-10b597b598f730b619aee40306265233.stex" ]
+source_file="res://minigames/03/assets/Dabarrow.png"
+dest_files=[ "res://.import/Dabarrow.png-dc306c4ae8b4a9c31f0dded0419167cc.stex" ]
 
 [params]
 
