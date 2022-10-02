@@ -13,8 +13,9 @@ func _ready():
 
 func _button_pressed():
 	var menu = find_parent("Menu")
-	menu.find_node("DebugLevelText").text = text
-	menu._on_Button_pressed()
+	# menu.find_node("DebugLevelText").text = text
+	menu.debug_level = text
+	menu._on_StartButton_pressed()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

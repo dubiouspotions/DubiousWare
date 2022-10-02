@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Arcade",
 "language": "GDScript",
-"path": "res://gamestates/arcade/arcade.gd"
+"path": "res://shared/arcade.gd"
 }, {
 "base": "Node2D",
 "class": "BaseMiniGame",
