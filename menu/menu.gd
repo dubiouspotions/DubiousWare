@@ -53,3 +53,4 @@ func _on_StartButton_pressed():
 	game.debug_level = debug_level
 	get_tree().get_root().add_child(game)
 	game.start()
+	$menumusic.stop()
