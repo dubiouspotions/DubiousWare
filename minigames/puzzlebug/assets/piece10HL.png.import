@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pieceHL08.png-869290c63a9d5e65a3db671e675f43ee.stex"
+path="res://.import/piece10HL.png-6c4d1f83c7ff6811a8b7b973337ce3f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/puzzlebug/assets/pieceHL08.png"
-dest_files=[ "res://.import/pieceHL08.png-869290c63a9d5e65a3db671e675f43ee.stex" ]
+source_file="res://minigames/puzzlebug/assets/piece10HL.png"
+dest_files=[ "res://.import/piece10HL.png-6c4d1f83c7ff6811a8b7b973337ce3f2.stex" ]
 
 [params]
 
