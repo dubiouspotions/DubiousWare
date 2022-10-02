@@ -160,14 +160,17 @@ margin_top = -44.0
 margin_right = 118.5
 margin_bottom = 44.0
 
-[node name="InstructionsPanel" type="Panel" parent="MainControl"]
+[node name="Instructions" type="Node2D" parent="MainControl"]
+z_index = 2
+
+[node name="InstructionsPanel" type="Panel" parent="MainControl/Instructions"]
 margin_left = 340.0
 margin_top = 207.0
 margin_right = 704.0
 margin_bottom = 322.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="Label" type="Label" parent="MainControl/InstructionsPanel"]
+[node name="Label" type="Label" parent="MainControl/Instructions/InstructionsPanel"]
 margin_left = 10.0
 margin_top = 8.0
 margin_right = 704.0
