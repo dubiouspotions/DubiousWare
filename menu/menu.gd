@@ -9,6 +9,7 @@ var game
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	prep_game()
+	$menumusic.play()
 	config = load("user://config.tres")
 	if not config:
 		config = Config.new()
@@ -24,7 +25,7 @@ func prep_game():
 	
 func update_player_selection():
 	for p in game.players:
-		var selbox = $PlayerSelection.find_node(p.index)
+		var selbox = find_node(p.index)
 		selbox.set_player(p)
 
 func add_game_button(name: String):

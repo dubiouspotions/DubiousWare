@@ -9,11 +9,12 @@ func set_player(p):
 func update():
 	$NameLabel.text = player.display_name
 	$JoinButton.text = player.button_label("action")
-	$BG.color =  Color("c5166d02") if player.is_playing else Color("8e220a0a")
+	# $BG.color =  Color("c5166d02") if player.is_playing else Color("8e220a0a")
+	$SelectRect.visible = player.is_playing 
 	$JoinButton/joinLabel.text = "joined!" if player.is_playing else "to join"
 
 func _input(evt):
-	if evt.is_action_pressed(player.action_name("action")):
+	if player and evt.is_action_pressed(player.action_name("action")):
 		toggle_playing()
 
 
