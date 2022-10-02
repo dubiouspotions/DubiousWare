@@ -21,6 +21,11 @@ func loadRandomMinigame():
 	var gamenames = all_games()
 	gamenames.shuffle()
 	var chosen_game = gamenames[0]
+	while chosen_game == game.last_game_name:
+		gamenames.shuffle()
+		chosen_game = gamenames[0]
+	game.last_game_name = chosen_game
+
 	if debug_level != "":
 		chosen_game = debug_level
 	print("PLAYING minigame "+chosen_game)

@@ -7,6 +7,7 @@ var current_arcade
 var players = []
 var menu
 var current_minigame_index = 0
+export var last_game_name = ""
 
 func _init():
 	self.name = "Game"
