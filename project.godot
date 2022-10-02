@@ -151,7 +151,8 @@ p3_down={
 }
 p3_action={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
 }
 p4_up={
 "deadzone": 0.5,
@@ -171,7 +172,8 @@ p4_down={
 }
 p4_action={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
 }
 
 [mono]

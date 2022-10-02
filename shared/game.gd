@@ -5,6 +5,7 @@ const TOTAL_MINIGAMES_IN_GAME = 10
 export var debug_level: String = ""
 var current_arcade
 var players = []
+var menu
 var current_minigame_index = 0
 
 func _init():
@@ -12,10 +13,10 @@ func _init():
 	var playersNode = Node.new()
 	playersNode.name = "Players"
 	self.add_child(playersNode)
-	playersNode.add_child(Player.new("p1"))
-	playersNode.add_child(Player.new("p2"))
-	playersNode.add_child(Player.new("p3"))
-	playersNode.add_child(Player.new("p4"))
+	playersNode.add_child(Player.new("p1", "Player 1"))
+	playersNode.add_child(Player.new("p2", "Player 2"))
+	playersNode.add_child(Player.new("p3", "Player 3"))
+	playersNode.add_child(Player.new("p4", "Player 4"))
 	players = playersNode.get_children()
 	
 
@@ -43,6 +44,7 @@ func play_next():
 
 func end():
 	# go back to main menu
+	menu.prep_game()
 	self.queue_free()
 
 func _input(event):
