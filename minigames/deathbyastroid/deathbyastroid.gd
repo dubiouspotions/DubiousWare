@@ -18,7 +18,7 @@ func wait_then_launch_astroid():
 	wait_then_launch_astroid()
 
 func launch_astroid(): 
-	var astroid = preload("res://minigames/spaceshooter/Astroid.tscn").instance()
+	var astroid = preload("res://minigames/deathbyastroid/Astroid.tscn").instance()
 	rng.randomize()
 	
 	var astroidNr = rng.randi_range(1, 4)

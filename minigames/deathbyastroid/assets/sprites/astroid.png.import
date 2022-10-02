@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-fa03a5132656f8a3942f56f0f6b5794c.stex"
+path="res://.import/astroid.png-0ff00ba6af9515a701f1542244e1c78f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/spaceshooter/assets/sprites/bg.png"
-dest_files=[ "res://.import/bg.png-fa03a5132656f8a3942f56f0f6b5794c.stex" ]
+source_file="res://minigames/deathbyastroid/assets/sprites/astroid.png"
+dest_files=[ "res://.import/astroid.png-0ff00ba6af9515a701f1542244e1c78f.stex" ]
 
 [params]
 
