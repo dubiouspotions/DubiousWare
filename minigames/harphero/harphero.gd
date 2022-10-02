@@ -3,33 +3,44 @@ extends BaseMiniGame
 var SCORE = 0
 var win_score = 10
 
-var note_vel = 185
+var note_vel = 350
 
 var click_pos = 426
-var ok_dist = 45
+var ok_dist = 55
 
 var _note = load("res://minigames/harphero/Note.tscn")
 
 var song = [
 	"Left",
+	"Gap",
 	"Right",
 	"Left",
+	"Gap",
 	"Left",
-	"Right",
-	"Left",
-	"Left",
-	"Left",
-	"Up",
-	"Right",
-	"Up",
-	"Right",
-	"Left",
-	"Down",
-	"Up",
+	"Gap",
 	"Up",
 	"Down",
+	"Gap",
+	"Left",
+	"Gap",
+	"Up",
+	"Right",
+	"Gap",
+	"Up",
+	"Gap",
+	"Right",
+	"Left",
+	"Gap",
+	"Down",
+	"Gap",
+	"Up",
+	"Up",
+	"Gap",
+	"Down",
+	"Gap",
 	"Down",
 	"Right",
+	"Gap",
 	"Left"
 ]
 var note_index = 0
@@ -62,7 +73,7 @@ func _process(delta):
 	for note in $Notes.get_children():
 		note.position.y += delta * note_vel
 		if note.position.y > click_pos + ok_dist:
-			fail_note(note)
+			note.fail()
 		
 	$huzzahMeter/huzzahBar.frame = SCORE
 
@@ -75,28 +86,24 @@ func success():
 	print("success")
 	SCORE += 1
 
-func fail_note(note):
-	note.scale.x = 0.5
-	note.scale.y = 0.5
-
-func success_note(note):
-	note.scale.x = 1.5
-	note.scale.y = 1.5
-
 func action(dir):
-	print(dir)
 	$Mouth.play("hit")
-	$Mouth/ResetTimer.start(0.7)
+	$Mouth/ResetTimer.start(0.4)
 	for note in $Notes.get_children():
-		if abs(note.position.y - click_pos) < ok_dist:
-			success()
-			success_note(note)
+		if note.STATE == "IN_PLAY" and abs(note.position.y - click_pos) < ok_dist:
+			if note.DIR == dir:
+				success()
+				note.success()
+			else:
+				note.fail()
 
 func _on_ResetTimer_timeout():
 	$Mouth.play("idle")
 
 func _on_NoteTimer_timeout():
-	var note = _note.instance()
-	note.set_direction(song[note_index])
-	$Notes.add_child(note)
+	var dir = song[note_index]
+	if dir != "Gap":
+		var note = _note.instance()
+		note.set_direction(song[note_index])
+		$Notes.add_child(note)
 	note_index += 1

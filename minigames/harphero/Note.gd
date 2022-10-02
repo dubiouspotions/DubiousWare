@@ -13,11 +13,21 @@ func set_direction(dir):
 
 func fail():
 	STATE = "FAILED"
-	print("meh")
+	$DirectionAnim.scale.x = 1
+	$DirectionAnim.scale.y = 1
 
-func succes():
+func success():
 	STATE = "SUCCESS"
-	print(":D")
+	$DirectionAnim.scale.x = 3
+	$DirectionAnim.scale.y = 3
+	if DIR == "Up":
+		$Up.play()
+	elif DIR == "Down":
+		$Down.play()
+	elif DIR == "Left":
+		$Left.play()
+	elif DIR == "Right":
+		$Right.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

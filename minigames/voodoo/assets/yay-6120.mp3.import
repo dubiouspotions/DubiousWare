@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/yay-6120.mp3-efd797eb905214c5bf5217915cfbd75e.mp3str"
+
+[deps]
+
+source_file="res://minigames/voodoo/assets/yay-6120.mp3"
+dest_files=[ "res://.import/yay-6120.mp3-efd797eb905214c5bf5217915cfbd75e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

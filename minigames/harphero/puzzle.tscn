@@ -54,7 +54,7 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
 "name": "hit",
-"speed": 10.0
+"speed": 16.0
 }, {
 "frames": [ SubResource( 9 ) ],
 "loop": true,
@@ -165,7 +165,7 @@ playing = true
 [node name="ResetTimer" type="Timer" parent="Mouth"]
 
 [node name="NoteTimer" type="Timer" parent="."]
-wait_time = 0.7
+wait_time = 0.45
 autostart = true
 
 [node name="Notes" type="Node2D" parent="."]
