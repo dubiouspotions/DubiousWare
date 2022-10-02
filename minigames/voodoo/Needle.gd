@@ -18,8 +18,10 @@ func _process(delta):
 		R.rotation_degrees += delta * rotation_speed
 
 func fail():
+	$Fail.play()
 	STATE = "IDLE_FAIL"
 
 func success():
+	$Hit.play()
 	$Needle.position.y = 120
 	STATE = "HIT"

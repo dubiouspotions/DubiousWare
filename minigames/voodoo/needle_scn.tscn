@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://minigames/voodoo/Needle.gd" type="Script" id=1]
 [ext_resource path="res://minigames/voodoo/assets/gamejam_0000_needle.png" type="Texture" id=2]
+[ext_resource path="res://minigames/voodoo/assets/yay-6120.mp3" type="AudioStream" id=3]
+[ext_resource path="res://minigames/voodoo/assets/muted-guitar-strum-81816.mp3" type="AudioStream" id=4]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -11,3 +13,9 @@ position = Vector2( 0, 240 )
 
 [node name="NeedleSprite" type="Sprite" parent="Needle"]
 texture = ExtResource( 2 )
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Fail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

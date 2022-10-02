@@ -36,7 +36,7 @@ frame = 1
 stream = ExtResource( 14 )
 
 [node name="bread" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 16 )
 
 [node name="flag" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 16 )
+stream = ExtResource( 15 )
