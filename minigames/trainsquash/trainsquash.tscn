@@ -195,7 +195,7 @@ margin_bottom = 21.0
 rect_clip_content = true
 
 [node name="gfx" type="Sprite" parent="Train/CrowdLeft"]
-position = Vector2( -144.5, 49 )
+position = Vector2( -144.5, 43 )
 texture = ExtResource( 10 )
 offset = Vector2( 247, 0 )
 script = ExtResource( 14 )
@@ -208,7 +208,7 @@ margin_bottom = 40.0
 rect_clip_content = true
 
 [node name="gfx" type="Sprite" parent="Train/CrowdRight"]
-position = Vector2( 160, 36 )
+position = Vector2( 160, 35.5 )
 texture = ExtResource( 7 )
 offset = Vector2( -65, 0 )
 script = ExtResource( 14 )
