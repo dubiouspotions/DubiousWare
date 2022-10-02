@@ -18,6 +18,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
+	if loosepieces.empty():
+		return
 	var selected_piece:Piece = loosepieces.front()
 	if not selected_piece:
 		return
