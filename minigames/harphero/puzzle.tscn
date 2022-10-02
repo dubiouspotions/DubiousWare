@@ -67,65 +67,65 @@ animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 10.0
 } ]
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 190, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 380, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=24]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 570, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 760, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 950, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 1140, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 1330, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 1520, 0, 190, 7 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 1710, 0, 190, 7 )
 
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"frames": [ null, SubResource( 31 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 10.0
 } ]
 
 [node name="Node2D" type="Node2D"]
@@ -171,9 +171,10 @@ autostart = true
 position = Vector2( 819, 52 )
 
 [node name="huzzahMeter" type="AnimatedSprite" parent="."]
-position = Vector2( 784, 943 )
-scale = Vector2( 2, 2 )
+position = Vector2( 699.769, 918 )
+scale = Vector2( 2.76923, 2.76923 )
 frames = SubResource( 10 )
+frame = 1
 
 [node name="huzzahBar" type="AnimatedSprite" parent="huzzahMeter"]
 position = Vector2( -10.5, 15 )

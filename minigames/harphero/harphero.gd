@@ -16,6 +16,10 @@ func _ready():
 	pass
 
 func _process(delta):
+	if SCORE >= win_score and not $huzzahMeter.playing:
+		$huzzahMeter.play()
+		return false
+	
 	if Input.is_action_just_pressed(self.player_index+"_action"):	
 		$Mouth.play("hit")
 		$Mouth/ResetTimer.start(0.7)
