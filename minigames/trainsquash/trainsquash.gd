@@ -21,6 +21,11 @@ var train_left = false
 
 var train: Train
 
+
+func getPlayerDidWin():
+	return train.full
+
+
 func schedule(time, obj, method):
 	var timer = Timer.new()
 	add_child(timer)
