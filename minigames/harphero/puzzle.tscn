@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://minigames/harphero/harphero.gd" type="Script" id=1]
 [ext_resource path="res://minigames/harphero/assets/Play Animation - Sprite Sheet.png" type="Texture" id=2]
@@ -41,12 +41,22 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 1272, 0, 212, 91 )
 
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 212, 91 )
+
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
-"name": "default",
+"name": "hit",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
 [node name="Node2D" type="Node2D"]
@@ -80,5 +90,16 @@ texture = ExtResource( 3 )
 position = Vector2( 335, 499 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
-frame = 6
+animation = "idle"
 playing = true
+
+[node name="ResetTimer" type="Timer" parent="Mouth"]
+
+[node name="NoteTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="Notes" type="Node2D" parent="."]
+position = Vector2( 819, 52 )
+
+[connection signal="timeout" from="Mouth/ResetTimer" to="." method="_on_ResetTimer_timeout"]
+[connection signal="timeout" from="NoteTimer" to="." method="_on_NoteTimer_timeout"]
