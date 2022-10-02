@@ -49,6 +49,8 @@ func _input(evt):
 		$StartButton.disabled = true
 	if Input.is_action_pressed("ui_accept"):
 		_on_StartButton_pressed()
+	if Input.is_action_pressed("ui_debug"):
+		$DebugButtons.show()
 
 func _on_StartButton_pressed():
 	if not game.has_any_players():
