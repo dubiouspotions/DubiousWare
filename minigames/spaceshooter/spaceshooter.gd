@@ -1,25 +1,39 @@
 extends BaseMiniGame
 
+var rng = RandomNumberGenerator.new()
 
 func getPlayerDidWin():
 	return true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	wait_then_launch_astroid()
 
+func wait_then_launch_astroid(): 
+	var wait = rand_range(0.2, 0.7)
+	yield(get_tree().create_timer(wait),"timeout")
+	launch_astroid()
+	wait_then_launch_astroid()
 
+func launch_astroid(): 
+	var astroid = preload("res://minigames/spaceshooter/Astroid.tscn").instance()
+	rng.randomize()
+	
+	var astroidNr = rng.randi_range(1, 4)
+	astroid.version = String(astroidNr)
+	
+	var astroidSpeed = rng.randi_range(200, 400)
+	astroid.speed = astroidSpeed
+	
+	var astroidPosition = rng.randi_range(50, 950)
+	astroid.position.x = astroidPosition
+	
+	astroid.position.y = 0
+	astroid.started = true
+	add_child(astroid)
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	return 
 	
-	if Input.is_action_pressed(self.player_index+"_left"):
-		$Player.translate(Vector2(-delta*400, 0))
-	if Input.is_action_pressed(self.player_index+"_right"):
-		$Player.translate(Vector2(delta*400, 0))
-	if Input.is_action_pressed(self.player_index+"_up"):
-		$Player.translate(Vector2(0, -delta*400))
-	if Input.is_action_pressed(self.player_index+"_down"):
-		$Player.translate(Vector2(0, delta*400))
-	if Input.is_action_pressed(self.player_index+"_action"):
-		print(str(delta)+" lol "+self.player_index)

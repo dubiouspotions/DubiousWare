@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://minigames/spaceshooter/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://minigames/spaceshooter/Astroid.tscn" type="PackedScene" id=2]
 [ext_resource path="res://minigames/spaceshooter/spaceshooter.gd" type="Script" id=3]
 [ext_resource path="res://minigames/spaceshooter/assets/sprites/bg.png" type="Texture" id=5]
 
@@ -49,15 +48,3 @@ shape = SubResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom"]
 position = Vector2( 585.5, 996 )
 shape = SubResource( 4 )
-
-[node name="Astroid" parent="." instance=ExtResource( 2 )]
-position = Vector2( 580, 94 )
-version = "1"
-
-[node name="Astroid3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 978, 457 )
-version = "3"
-
-[node name="Astroid2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 350, 348 )
-version = "2"
