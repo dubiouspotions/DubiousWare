@@ -53,6 +53,7 @@ func _ready():
 			split.transform = split.transform.scaled(Vector2(mg_scale, mg_scale))
 			split.player = p
 			split.player_index = p.index
+			split.difficulty = game.current_minigame_index
 			find_node(p.index).add_child(split)
 	$Countdown.connect("countdown_done",self,"end_game")
 	update_score_labels()

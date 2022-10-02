@@ -7,6 +7,7 @@ func getPlayerDidWin():
 	
 var player
 var player_index
+var difficulty: int
 
 func get_input_vector() -> Vector2:
 	return Input.get_vector(player.index+"_left", player.index+"_right", player.index+"_up", player.index+"_down")
