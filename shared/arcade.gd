@@ -29,6 +29,15 @@ func loadRandomMinigame():
 	if scene == null:
 		scene = load("res://minigames/" + chosen_game + "/puzzle.tscn")
 	assert(scene != null)
+	
+	$tictoc.play() 
+		
+	var audio_file = "res://minigames/" + chosen_game + "/assets/music.wav"
+	if File.new().file_exists(audio_file):
+		var sfx = load(audio_file) 
+		$gamemusic.stream = sfx
+		$gamemusic.play()
+	
 	return scene
 
 func _ready():

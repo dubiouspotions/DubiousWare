@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://minigames/salmontetris/Blocks/BendBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/salmontetris/Blocks/TummyBlock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://minigames/salmontetris/Blocks/ButtBlock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://minigames/salmontetris/Blocks/HeadBlock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://minigames/salmontetris/Tetrimino.cs" type="Script" id=5]
+
+[node name="Tetrimino" type="KinematicBody2D"]
+z_index = 1
+script = ExtResource( 5 )
+
+[node name="HeadBlock" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16, 0 )
+
+[node name="TummyBlock" parent="." instance=ExtResource( 2 )]
+
+[node name="BendBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( -16, 0 )
+
+[node name="ButtBlock" parent="." instance=ExtResource( 3 )]
+position = Vector2( -16, 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 8, 16 )
+scale = Vector2( 2.4, 1.6 )
+polygon = PoolVector2Array( 0, -0.625, -3.75, -0.625, -3.75, 9.375, -9.58334, 9.375, -9.58334, -9.37501, 9.58334, -9.37501, 9.58334, -0.625 )
