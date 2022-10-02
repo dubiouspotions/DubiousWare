@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/salmon2.png-439cc9746ee96b0596192f533f32e79c.stex"
+path="res://.import/pingu.png-12cb1ecef848b323bc0c17677b821e6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/salmontetris/assets/sprites/salmon2.png"
-dest_files=[ "res://.import/salmon2.png-439cc9746ee96b0596192f533f32e79c.stex" ]
+source_file="res://minigames/salmontetris/assets/sprites/pingu.png"
+dest_files=[ "res://.import/pingu.png-12cb1ecef848b323bc0c17677b821e6f.stex" ]
 
 [params]
 
