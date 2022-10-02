@@ -39,10 +39,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://menu/GameButton.gd"
 }, {
+"base": "Sprite",
+"class": "Piece",
+"language": "GDScript",
+"path": "res://minigames/puzzlebug/Piece.gd"
+}, {
 "base": "Node",
 "class": "Player",
 "language": "GDScript",
 "path": "res://shared/player.gd"
+}, {
+"base": "Node2D",
+"class": "Train",
+"language": "GDScript",
+"path": "res://minigames/trainsquash/Train.gd"
 } ]
 _global_script_class_icons={
 "Arcade": "",
@@ -51,7 +61,9 @@ _global_script_class_icons={
 "Config": "",
 "Game": "",
 "GameButton": "",
-"Player": ""
+"Piece": "",
+"Player": "",
+"Train": ""
 }
 
 [application]

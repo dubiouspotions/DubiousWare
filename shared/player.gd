@@ -22,8 +22,11 @@ func _ready():
 func add_point():
 	score = score + 1
 
+func action_name(action):
+	return index+"_"+action
+
 func is_action_pressed():
-	return Input.is_action_pressed(index+"_action")
+	return Input.is_action_pressed(action_name("action"))
 
 func button_label(action):
 	var full_action = index+"_"+action

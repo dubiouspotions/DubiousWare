@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/piece.ogg-6a6c2ea43b5503995e3909374dc7599e.oggstr"
+
+[deps]
+
+source_file="res://minigames/puzzlebug/assets/piece.ogg"
+dest_files=[ "res://.import/piece.ogg-6a6c2ea43b5503995e3909374dc7599e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

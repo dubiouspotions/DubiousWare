@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://minigames/harphero/harphero.gd" type="Script" id=1]
 [ext_resource path="res://minigames/harphero/assets/Play Animation - Sprite Sheet.png" type="Texture" id=2]
 [ext_resource path="res://minigames/harphero/assets/Thee Line.png" type="Texture" id=3]
 [ext_resource path="res://minigames/harphero/assets/The Harper.png" type="Texture" id=4]
 [ext_resource path="res://minigames/harphero/assets/Backdrop.png" type="Texture" id=5]
+[ext_resource path="res://minigames/harphero/assets/huzzah-anim-1.png" type="Texture" id=6]
+[ext_resource path="res://minigames/harphero/assets/huzzah-anim-0.png" type="Texture" id=7]
+[ext_resource path="res://minigames/harphero/assets/huzzah-meter-indicator.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -41,9 +44,85 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 1272, 0, 212, 91 )
 
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 212, 91 )
+
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": false,
+"name": "hit",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 190, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 380, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 570, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 760, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 950, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1140, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1330, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1520, 0, 190, 7 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1710, 0, 190, 7 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ null, SubResource( 31 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
@@ -76,8 +155,31 @@ position = Vector2( 830, 444 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Mouth" type="AnimatedSprite" parent="."]
 position = Vector2( 335, 499 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
+animation = "idle"
 playing = true
+
+[node name="ResetTimer" type="Timer" parent="Mouth"]
+
+[node name="NoteTimer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[node name="Notes" type="Node2D" parent="."]
+position = Vector2( 819, 52 )
+
+[node name="huzzahMeter" type="AnimatedSprite" parent="."]
+position = Vector2( 699.769, 918 )
+scale = Vector2( 2.76923, 2.76923 )
+frames = SubResource( 10 )
+frame = 1
+
+[node name="huzzahBar" type="AnimatedSprite" parent="huzzahMeter"]
+position = Vector2( -10.5, 15 )
+frames = SubResource( 21 )
+
+[connection signal="timeout" from="Mouth/ResetTimer" to="." method="_on_ResetTimer_timeout"]
+[connection signal="timeout" from="NoteTimer" to="." method="_on_NoteTimer_timeout"]

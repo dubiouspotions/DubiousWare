@@ -11,7 +11,7 @@ height = 0.0
 mode = 2
 mass = 60.0
 gravity_scale = 0.0
-linear_damp = 0.0
+linear_damp = 1.0
 angular_damp = 9999.0
 script = ExtResource( 1 )
 
