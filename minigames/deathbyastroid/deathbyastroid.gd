@@ -7,6 +7,9 @@ func getPlayerDidWin():
 		return false
 	return true
 
+func getInstruction():
+	return "Watch out!"
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	wait_then_launch_astroid()

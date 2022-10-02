@@ -4,6 +4,9 @@ extends Node2D
 
 func getPlayerDidWin():
 	return false
+
+func getInstruction():
+	return "Do the thing!"
 	
 var player
 export var player_index = "p1"

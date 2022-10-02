@@ -22,6 +22,9 @@ func getPlayerDidWin():
 		return true
 	return false
 
+func getInstruction():
+	return "Build a sandwich!"
+
 func _ready():
 	pass # Replace with function body.
 

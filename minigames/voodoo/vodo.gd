@@ -13,7 +13,9 @@ func getPlayerDidWin():
 	if SCORE >= win_score:
 		return true
 	return false
-
+func getInstruction():
+	return "Pin the doll!"
+	
 func new_needle():
 	current_needle = _needle.instance()
 	current_needle.position.x = 512

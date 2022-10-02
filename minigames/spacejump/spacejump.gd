@@ -4,6 +4,9 @@ extends BaseMiniGame
 func getPlayerDidWin():
 	return $PlayerShip.are_you_winning_son
 
+func getInstruction():
+	return "Don't crash!"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$planets/Planet.r_speed =  1 + difficulty/3

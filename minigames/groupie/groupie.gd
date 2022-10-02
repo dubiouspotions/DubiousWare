@@ -12,6 +12,9 @@ var _randomNumberArray = [0,1,2,3,4,5,6,7,8,9,10]
 func getPlayerDidWin():
 	return true
 
+func getInstruction():
+	return "Snap the group selfie!"
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_randomNumberArray.shuffle()

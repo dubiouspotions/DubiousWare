@@ -49,7 +49,9 @@ func getPlayerDidWin():
 	if SCORE >= win_score:
 		return true
 	return false
-
+func getInstruction():
+	return "Regale the court!"
+	
 func _ready():
 	pass
 

@@ -12,7 +12,9 @@ func getPlayerDidWin():
 	if markerState != "WON":
 		return false
 	return true
-
+func getInstruction():
+	return "Dab on 'em!"
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	markerSpeed = 2 + difficulty/2.0

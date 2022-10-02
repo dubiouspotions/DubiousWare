@@ -4,7 +4,8 @@ var loosepieces:Array
 
 func getPlayerDidWin():
 	return loosepieces.size() == 0
-
+func getInstruction():
+	return "BUILD THE BUG!"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var pieces = $board/pieces.get_children()

@@ -8,6 +8,9 @@ var poopcount = 0
 var boops = []
 var poops = []
 
+func getInstruction():
+	return "Boop the snoot!"
+
 class Dog:
 	var file: String
 	var _tex

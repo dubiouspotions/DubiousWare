@@ -24,7 +24,8 @@ var train: Train
 
 func getPlayerDidWin():
 	return train.full
-
+func getInstruction():
+	return "Fill the train!"
 
 func schedule(time, obj, method):
 	var timer = Timer.new()

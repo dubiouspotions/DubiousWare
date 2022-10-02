@@ -62,9 +62,13 @@ func _ready():
 			split.player = p
 			split.player_index = p.index
 			split.difficulty = game.current_minigame_index
+			$MainControl/InstructionsPanel/Label.text = split.getInstruction()
 			find_node(p.index).add_child(split)
 	$MainControl/Countdown.connect("countdown_done",self,"end_game")
 	update_score_labels()
+	
+	yield(get_tree().create_timer(1.5),"timeout")
+	$MainControl/InstructionsPanel.hide()
 
 func end_game():
 	for p in game.players:
