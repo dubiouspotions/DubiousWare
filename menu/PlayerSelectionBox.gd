@@ -14,5 +14,9 @@ func update():
 
 func _input(evt):
 	if player.is_action_pressed():
-		player.is_playing = not player.is_playing
+		toggle_playing()
+
+
+func toggle_playing():
+	player.is_playing = not player.is_playing
 	update()

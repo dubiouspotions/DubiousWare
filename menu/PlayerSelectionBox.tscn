@@ -36,3 +36,5 @@ rect_scale = Vector2( 0.8, 0.8 )
 text = "join!
 "
 align = 1
+
+[connection signal="pressed" from="JoinButton" to="." method="toggle_playing"]
