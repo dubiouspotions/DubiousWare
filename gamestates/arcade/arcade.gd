@@ -48,23 +48,25 @@ func _ready():
 	var scene = loadRandomMinigame()
 	 
 	for p in game.players:
-		var split = scene.instance()
-		split.transform = split.transform.scaled(Vector2(mg_scale, mg_scale))
-		split.player = p
-		split.player_index = p.index
-		find_node(p.index).add_child(split)
+		if p.is_playing:
+			var split = scene.instance()
+			split.transform = split.transform.scaled(Vector2(mg_scale, mg_scale))
+			split.player = p
+			split.player_index = p.index
+			find_node(p.index).add_child(split)
 	
 	$Countdown.connect("countdown_done",self,"end_game")
 	update_score_labels()
 
 func end_game():
 	for p in game.players:
-		var split = $splits.find_node(p.index)
-		var splitgame = split.get_child(0)
-		var won = splitgame.getPlayerDidWin()
-		if won:
-			p.add_point()
-		print("Won? ", p.index, won, p.score)
+		if p.is_playing:
+			var split = $splits.find_node(p.index)
+			var splitgame = split.get_child(0)
+			var won = splitgame.getPlayerDidWin()
+			if won:
+				p.add_point()
+			print("Won? ", p.index, won, p.score)
 	update_score_labels()
 	game.play_next()
 
