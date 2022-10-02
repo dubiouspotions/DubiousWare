@@ -45,4 +45,7 @@ func _process(delta):
 		if (_currentFrame == 10):
 			_timer.stop()
 			_hasPlayerSucceeded = true
+		else:
+			#play buzzer sound
+			pass
 			

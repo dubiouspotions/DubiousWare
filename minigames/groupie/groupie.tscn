@@ -54,10 +54,12 @@ scale = Vector2( 9.10156, 7.85156 )
 texture = ExtResource( 22 )
 
 [node name="snapshots" type="AnimatedSprite" parent="."]
-position = Vector2( 516, 350 )
+position = Vector2( 516, 504 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 4 )
 frame = 10
 
 [node name="overlays" type="AnimatedSprite" parent="."]
-position = Vector2( 516, 350 )
+position = Vector2( 516, 504 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 5 )
