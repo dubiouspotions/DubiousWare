@@ -63,15 +63,19 @@ func _ready():
 
 func end_game():
 	for p in game.players:
+		$end.get_node(p.index).visible = p.is_playing
 		if p.is_playing:
 			var split = $splits.find_node(p.index)
 			var splitgame = split.get_child(0)
 			var won = splitgame.getPlayerDidWin()
 			if won:
 				p.add_point()
+			$end.get_node(p.index+"/Loose").visible = not won
+			$end.get_node(p.index+"/Win").visible = won
 			print("Won? ", p.index, won, p.score)
 	update_score_labels()
-	game.play_next()
+	$end.visible = true
+	$PauseTimer.start(2)
 
 func update_score_labels():
 	for label in $scores.get_children():
@@ -80,3 +84,6 @@ func update_score_labels():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func _on_PauseTimer_timeout():
+	game.play_next()
