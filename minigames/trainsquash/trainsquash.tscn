@@ -54,6 +54,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.0, 25.0 ]
 }
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "did_arrive"
+} ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "Depart"
@@ -94,6 +108,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 25.0, 0.0 ]
 }
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "will_depart"
+} ]
+}
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 32, -32, 0, 32, 0 )
@@ -125,7 +153,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 250, 250 )
 
 [node name="Train" type="Node2D" parent="."]
-position = Vector2( -1000, 190 )
+position = Vector2( 260, 190 )
 script = ExtResource( 9 )
 
 [node name="Back" type="Sprite" parent="Train"]
@@ -161,12 +189,12 @@ texture = ExtResource( 6 )
 script = ExtResource( 14 )
 
 [node name="DoorRight" type="Sprite" parent="Train"]
-position = Vector2( 0, 4 )
+position = Vector2( 25, 4 )
 texture = ExtResource( 4 )
 offset = Vector2( 16, 0 )
 
 [node name="DoorLeft" type="Sprite" parent="Train"]
-position = Vector2( 0, 3 )
+position = Vector2( -25, 3 )
 texture = ExtResource( 12 )
 offset = Vector2( -18, 0 )
 
@@ -260,3 +288,6 @@ shape = SubResource( 7 )
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Platform/GameArea/DoorBlocker"]
 position = Vector2( 231.5, -29.5 )
 shape = SubResource( 7 )
+
+[node name="CommuterIdleTarget" type="Node2D" parent="Platform"]
+position = Vector2( 259, 78 )

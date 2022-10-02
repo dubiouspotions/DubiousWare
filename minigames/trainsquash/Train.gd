@@ -19,15 +19,9 @@ var train_left = false
 
 var door_travel = 25
 
-var tween = Tween.new()
-var tween2 = Tween.new()
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_child(tween)
-	add_child(tween2)
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -38,3 +32,9 @@ func arrive():
 
 func depart():
 	$AnimationPlayer.play("Depart")
+
+func did_arrive():
+	arrived = true
+	
+func will_depart():
+	arrived = false
