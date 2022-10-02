@@ -2,23 +2,24 @@ using Godot;
 
 public class Salmon : KinematicBody2D
 {
-    const int walkSpeed = 600;
-    const float gravity = 800;
-    const float jumpSpeed = 800;
+    const int walkSpeed = 200;
+    const float gravity = 200;
+    const float jumpSpeed = 200;
     const ulong jumpTime = 300;
     const ulong jumpCancelTime = 175;
 
     private Vector2 velocity;
     private AnimatedSprite sprite;
-    private ulong lastJump = 0;
-
-    private string Left => GetParent().GetParent().Get("player_index") + "_left";
-    private string Right => GetParent().GetParent().Get("player_index") + "_right";
-    private string Jump => GetParent().GetParent().Get("player_index") + "_action";
+    private ulong lastJump;
+    private string cachedPlayerIndex;
+    private string Left => $"{cachedPlayerIndex}_left";
+    private string Right => $"{cachedPlayerIndex}_right";
+    private string Jump => $"{cachedPlayerIndex}_action";
 
     public override void _Ready()
     {
         sprite = (AnimatedSprite) GetNode("AnimatedSprite");
+        cachedPlayerIndex = (string)GetParent().GetParent().Get("player_index");
     }
 
     public override void _PhysicsProcess(float delta)
