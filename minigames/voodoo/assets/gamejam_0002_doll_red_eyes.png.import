@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gamejam_0002_doll.png-94dbce5f08761f33a30c862f1e37bde4.stex"
+path="res://.import/gamejam_0002_doll_red_eyes.png-518eb21a49210986333f9c0902b13f00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/vodo/assets/gamejam_0002_doll.png"
-dest_files=[ "res://.import/gamejam_0002_doll.png-94dbce5f08761f33a30c862f1e37bde4.stex" ]
+source_file="res://minigames/voodoo/assets/gamejam_0002_doll_red_eyes.png"
+dest_files=[ "res://.import/gamejam_0002_doll_red_eyes.png-518eb21a49210986333f9c0902b13f00.stex" ]
 
 [params]
 

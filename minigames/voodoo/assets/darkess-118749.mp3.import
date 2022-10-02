@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/darkess-118749.mp3-75cf02390ca39f5890bdc8e20b97d54f.mp3str"
+
+[deps]
+
+source_file="res://minigames/voodoo/assets/darkess-118749.mp3"
+dest_files=[ "res://.import/darkess-118749.mp3-75cf02390ca39f5890bdc8e20b97d54f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

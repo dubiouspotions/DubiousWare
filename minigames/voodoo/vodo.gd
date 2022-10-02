@@ -5,7 +5,7 @@ var win_score = 3
 var rotation_speed = 40
 var deg_opening = 14
 
-var _needle = load("res://minigames/vodo/needle_scn.tscn")
+var _needle = load("res://minigames/voodoo/needle_scn.tscn")
 
 var current_needle
 
@@ -48,15 +48,17 @@ func fail():
 func success():
 	current_needle.success()
 	SCORE += 1
-	$Doll/AnimatedDoll.play("hit")
-	$Timer2.start(0.6)
 	new_needle()
+	$Timer2.start(0.5)
 	if SCORE >= win_score:
+		$Doll/AnimatedDoll.play("hit", true)
 		current_needle.visible = false
 		for needle in $Needles.get_children():
 			if (needle.STATE != "HIT"):
 				needle.visible = false
 		$Doll/Circle.visible = false
+	else:
+		$Doll/AnimatedDoll.play("hit")
 
 func _on_Timer_timeout():
 	new_needle()

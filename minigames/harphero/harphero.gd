@@ -12,7 +12,8 @@ func _ready():
 	pass
 
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed(self.player_index+"_action"):	
+		$Mouth.play("default")
 
 func fail():
 	pass
