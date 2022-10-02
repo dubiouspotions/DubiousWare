@@ -59,7 +59,7 @@ func gen_crowd():
 		commuter.game = self
 		
 		commuter.position = Vector2(
-			rand_range(-50, 50.0),
+			rand_range(-50*2, 50.0*2),
 			rand_range(46.0, 200.0)
 		)
 		crowd.add_child(commuter)

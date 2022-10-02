@@ -253,7 +253,7 @@ margin_right = 486.0
 margin_bottom = 222.0
 
 [node name="Player" type="KinematicBody2D" parent="Platform/GameArea"]
-position = Vector2( 250, 194 )
+position = Vector2( 120, 204 )
 script = ExtResource( 15 )
 
 [node name="Player" type="Sprite" parent="Platform/GameArea/Player"]
