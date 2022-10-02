@@ -29,7 +29,7 @@ func _physics_process(delta):
 		var input = $"..".get_input_vector()
 		self.rotation = self.rotation + input.x * 5 * delta
 		
-		acceleration.y = input.y * 300
+		acceleration.y = min(0, input.y) * 300
 		velocity = velocity + acceleration.rotated(self.rotation)*delta
 		move_and_slide(velocity, Vector2(0, -1))
 		
