@@ -13,11 +13,23 @@ func _ready():
 	for piece in loosepieces:
 		piece.original_transform = piece.transform
 		piece.transform = $board/pile.transform
-		piece.highlight()
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
+	var selected_piece:Piece = loosepieces.front()
+	if not selected_piece:
+		return
+	var movement = get_input_vector()*delta*1400
+	selected_piece.translate(movement)
+	selected_piece.highlight()
+	
+	if selected_piece.transform.get_origin().distance_to(selected_piece.original_transform.get_origin()) < 50:
+		selected_piece.transform = selected_piece.original_transform
+		loosepieces.pop_front()
+		selected_piece.dehighlight()
+	
 	if Input.is_action_pressed(self.player_index+"_action"):
 		pass
 

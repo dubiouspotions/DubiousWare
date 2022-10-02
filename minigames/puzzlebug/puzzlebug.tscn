@@ -44,97 +44,81 @@ texture = ExtResource( 17 )
 
 [node name="Piece01" type="Sprite" parent="board/pieces"]
 position = Vector2( 630, 7.50012 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 19 )
 script = ExtResource( 20 )
 
 [node name="Piece02" type="Sprite" parent="board/pieces"]
 position = Vector2( 790, 825 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 script = ExtResource( 20 )
 
 [node name="Piece03" type="Sprite" parent="board/pieces"]
 position = Vector2( 460, 830 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 script = ExtResource( 20 )
 
 [node name="Piece04" type="Sprite" parent="board/pieces"]
 position = Vector2( 622.5, 565 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 script = ExtResource( 20 )
 
 [node name="Piece05" type="Sprite" parent="board/pieces"]
 position = Vector2( 615, 302.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 script = ExtResource( 20 )
 
 [node name="Piece06" type="Sprite" parent="board/pieces"]
 position = Vector2( 737.5, 40.0001 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 8 )
 script = ExtResource( 20 )
 
 [node name="Piece07" type="Sprite" parent="board/pieces"]
 position = Vector2( 515, 35.0001 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 script = ExtResource( 20 )
 
 [node name="Piece08" type="Sprite" parent="board/pieces"]
 position = Vector2( 625, -107.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 script = ExtResource( 20 )
 
 [node name="Piece09" type="Sprite" parent="board/pieces"]
 position = Vector2( 797.5, -97.4998 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 4 )
 script = ExtResource( 20 )
 
 [node name="Piece10" type="Sprite" parent="board/pieces"]
 position = Vector2( 465, -89.9999 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 script = ExtResource( 20 )
 
 [node name="Piece11" type="Sprite" parent="board/pieces"]
 position = Vector2( 1127.5, 535 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
 script = ExtResource( 20 )
 
 [node name="Piece12" type="Sprite" parent="board/pieces"]
 position = Vector2( 1057.5, 940 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 7 )
 script = ExtResource( 20 )
 
 [node name="Piece13" type="Sprite" parent="board/pieces"]
 position = Vector2( 177.5, 1102.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 11 )
 script = ExtResource( 20 )
 
 [node name="Piece14" type="Sprite" parent="board/pieces"]
 position = Vector2( 122.5, 442.5 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 script = ExtResource( 20 )
 
 [node name="Piece15" type="Sprite" parent="board/pieces"]
 position = Vector2( 215, 190 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 script = ExtResource( 20 )
 
 [node name="Piece16" type="Sprite" parent="board/pieces"]
 position = Vector2( 972.5, 75.0001 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 script = ExtResource( 20 )
 
