@@ -34,6 +34,9 @@ func save_config():
 	ResourceSaver.save("user://config.tres", config)
 
 func _on_Button_pressed():
+	if not game.has_any_players():
+		OS.alert("You must be at least one player to start a game. Press an action button (space, period, X on controller) to join.", "Oops!")
+		return
 	game.debug_level = $DebugLevelText.text
 	get_tree().get_root().add_child(game)
 	game.start()

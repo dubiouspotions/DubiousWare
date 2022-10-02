@@ -47,6 +47,12 @@ func end():
 	menu.prep_game()
 	self.queue_free()
 
+func has_any_players():
+	for p in players:
+		if p.is_playing:
+			return true
+	return false
+
 func _input(event):
 	if Input.is_action_pressed("ui_cancel"):
 		end()
