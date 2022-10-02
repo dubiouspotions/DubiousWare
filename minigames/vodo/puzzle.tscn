@@ -17,6 +17,11 @@ animations = [ {
 "loop": true,
 "name": "evil",
 "speed": 5.0
+}, {
+"frames": [ null, ExtResource( 2 ), null, ExtResource( 2 ), null, ExtResource( 2 ) ],
+"loop": true,
+"name": "hit",
+"speed": 10.0
 } ]
 
 [node name="Node2D" type="Node2D"]
@@ -54,4 +59,7 @@ frames = SubResource( 1 )
 wait_time = 3.0
 one_shot = true
 
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
