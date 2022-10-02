@@ -15,9 +15,8 @@
 [ext_resource path="res://minigames/trainsquash/CrowdCenter.gd" type="Script" id=14]
 [ext_resource path="res://minigames/trainsquash/Player.gd" type="Script" id=15]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 8.5
-height = 28.0
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 32, -32, 0, 32, 0 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 296.125, 20.25 )
@@ -116,8 +115,8 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/GameArea/Player"]
 position = Vector2( -0.5, -13 )
-rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 8 )
+one_way_collision = true
 
 [node name="Commuters" type="Node2D" parent="Platform/GameArea"]
 position = Vector2( 244, -44 )
