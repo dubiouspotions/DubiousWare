@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-f89601738cb6fa19a93ebdf9f6e010bd.stex"
+path="res://.import/Screen 11arcade_bg.png-198977af754af23554a397aa42a8403f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gamestates/arcade/bg.png"
-dest_files=[ "res://.import/bg.png-f89601738cb6fa19a93ebdf9f6e010bd.stex" ]
+source_file="res://gamestates/arcade/Screen 11arcade_bg.png"
+dest_files=[ "res://.import/Screen 11arcade_bg.png-198977af754af23554a397aa42a8403f.stex" ]
 
 [params]
 
