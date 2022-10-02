@@ -23,7 +23,7 @@ public class Countdown : RichTextLabel
 	{
 		seconds--;
 
-		if (seconds < 0)
+		if (seconds == 0)
 		{
 			EmitSignal("countdown_done");
 			QueueFree();
