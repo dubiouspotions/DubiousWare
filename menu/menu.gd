@@ -2,6 +2,8 @@ extends Control
 
 var config:Config
 
+export var debug_level = ""
+
 var game
 
 # Called when the node enters the scene tree for the first time.
@@ -47,5 +49,6 @@ func _on_StartButton_pressed():
 		OS.alert("You must be at least one player to start a game. Press an action button (space, period, X on controller) to join.", "Oops!")
 		return
 	#game.debug_level = $DebugLevelText.text
+	game.debug_level = debug_level
 	get_tree().get_root().add_child(game)
 	game.start()

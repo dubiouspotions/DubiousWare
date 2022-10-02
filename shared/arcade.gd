@@ -26,8 +26,8 @@ func loadRandomMinigame():
 	var gamenames = all_games()
 	gamenames.shuffle()
 	var chosen_game = gamenames[0]
-	# if debug_level != "":
-	#	chosen_game = debug_level
+	if debug_level != "":
+		chosen_game = debug_level
 	print("PLAYING minigame "+chosen_game)
 	
 	var scene = load("res://minigames/" + chosen_game + "/" + chosen_game + ".tscn")
