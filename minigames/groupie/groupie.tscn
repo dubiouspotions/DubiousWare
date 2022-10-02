@@ -1,0 +1,63 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://minigames/groupie/assets/sprites/2.png" type="Texture" id=1]
+[ext_resource path="res://minigames/groupie/assets/sprites/10-snap.png" type="Texture" id=2]
+[ext_resource path="res://minigames/groupie/assets/sprites/10.png" type="Texture" id=3]
+[ext_resource path="res://minigames/groupie/assets/sprites/6.png" type="Texture" id=4]
+[ext_resource path="res://minigames/groupie/assets/sprites/9.png" type="Texture" id=5]
+[ext_resource path="res://minigames/groupie/assets/sprites/0.png" type="Texture" id=6]
+[ext_resource path="res://minigames/groupie/assets/sprites/1.png" type="Texture" id=7]
+[ext_resource path="res://minigames/groupie/assets/sprites/3.png" type="Texture" id=8]
+[ext_resource path="res://minigames/groupie/assets/sprites/4.png" type="Texture" id=9]
+[ext_resource path="res://minigames/groupie/assets/sprites/7.png" type="Texture" id=10]
+[ext_resource path="res://minigames/groupie/assets/sprites/8.png" type="Texture" id=11]
+[ext_resource path="res://minigames/groupie/assets/sprites/5.png" type="Texture" id=12]
+[ext_resource path="res://minigames/groupie/assets/sprites/2-snap.png" type="Texture" id=13]
+[ext_resource path="res://minigames/groupie/assets/sprites/4-snap.png" type="Texture" id=14]
+[ext_resource path="res://minigames/groupie/assets/sprites/5-snap.png" type="Texture" id=15]
+[ext_resource path="res://minigames/groupie/assets/sprites/6-snap.png" type="Texture" id=16]
+[ext_resource path="res://minigames/groupie/assets/sprites/7-snap.png" type="Texture" id=17]
+[ext_resource path="res://minigames/groupie/assets/sprites/0-snap.png" type="Texture" id=18]
+[ext_resource path="res://minigames/groupie/assets/sprites/8-snap.png" type="Texture" id=19]
+[ext_resource path="res://minigames/groupie/assets/sprites/9-snap.png" type="Texture" id=20]
+[ext_resource path="res://minigames/groupie/assets/sprites/1-snap.png" type="Texture" id=21]
+[ext_resource path="res://minigames/deathbyastroid/assets/sprites/bg.png" type="Texture" id=22]
+[ext_resource path="res://minigames/groupie/groupie.gd" type="Script" id=23]
+[ext_resource path="res://minigames/groupie/assets/sprites/3-snap.png" type="Texture" id=24]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 21 ), ExtResource( 13 ), ExtResource( 24 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 23 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1020.0
+margin_bottom = 1020.0
+
+[node name="Bg" type="Sprite" parent="Control"]
+position = Vector2( 581.5, 499.5 )
+scale = Vector2( 9.10156, 7.85156 )
+texture = ExtResource( 22 )
+
+[node name="snapshots" type="AnimatedSprite" parent="."]
+position = Vector2( 516, 350 )
+frames = SubResource( 4 )
+frame = 10
+
+[node name="overlays" type="AnimatedSprite" parent="."]
+position = Vector2( 516, 350 )
+frames = SubResource( 5 )
