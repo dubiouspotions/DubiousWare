@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gamejam_0001_circle.png-93429676fa6a4c9c98cec07ff69cc6fd.stex"
+path="res://.import/gamejam_0000_needle.png-865b8b2fc5779909234cc5949943df9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/vodo/assets/gamejam_0001_circle.png"
-dest_files=[ "res://.import/gamejam_0001_circle.png-93429676fa6a4c9c98cec07ff69cc6fd.stex" ]
+source_file="res://minigames/voodoo/assets/gamejam_0000_needle.png"
+dest_files=[ "res://.import/gamejam_0000_needle.png-865b8b2fc5779909234cc5949943df9f.stex" ]
 
 [params]
 

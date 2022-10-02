@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://minigames/vodo/Needle.gd" type="Script" id=1]
-[ext_resource path="res://minigames/vodo/assets/gamejam_0000_needle.png" type="Texture" id=2]
+[ext_resource path="res://minigames/voodoo/Needle.gd" type="Script" id=1]
+[ext_resource path="res://minigames/voodoo/assets/gamejam_0000_needle.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
