@@ -20,8 +20,8 @@ margin_right = 1020.0
 margin_bottom = 1020.0
 
 [node name="Bg" type="Sprite" parent="Control"]
-position = Vector2( 581.5, 499.5 )
-scale = Vector2( 9.10156, 7.85156 )
+position = Vector2( 512, 512 )
+scale = Vector2( 8, 8 )
 texture = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
@@ -36,7 +36,7 @@ shape = SubResource( 3 )
 [node name="WallRight" type="StaticBody2D" parent="." groups=["Walls"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
-position = Vector2( 1178, 495 )
+position = Vector2( 1024, 495 )
 shape = SubResource( 3 )
 
 [node name="WallTop" type="StaticBody2D" parent="." groups=["Walls"]]
