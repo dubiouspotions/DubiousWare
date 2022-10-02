@@ -16,7 +16,7 @@ func _ready():
 			winner = p
 			winscore = p.score
 	$WhoWon.text = "Player " + winner.index + "\nWon!"
-
+	$endmusic.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -25,3 +25,4 @@ func _ready():
 
 func _on_Button_pressed():
 	game.end()
+	$endmusic.stop()

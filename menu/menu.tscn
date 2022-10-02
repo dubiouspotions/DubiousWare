@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://menu/assets/Group 39StartButton.png" type="Texture" id=2]
 [ext_resource path="res://fonts/dubious_theme.tres" type="Theme" id=3]
 [ext_resource path="res://menu/assets/Screen 1 - step 2menu_bg.png" type="Texture" id=4]
 [ext_resource path="res://menu/PlayerSelectionBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menu/assets/Group 16StartButton_active.png" type="Texture" id=6]
 [ext_resource path="res://shared/assets/menumusic.wav" type="AudioStream" id=7]
 
 [node name="Menu" type="Control"]
@@ -29,7 +30,8 @@ margin_left = -219.5
 margin_top = -140.0
 margin_right = 219.5
 margin_bottom = -53.0
-texture_normal = ExtResource( 2 )
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 2 )
 
 [node name="DebugButtons" type="GridContainer" parent="."]
 margin_left = 1.0

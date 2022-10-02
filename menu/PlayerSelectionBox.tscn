@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://menu/PlayerSelectionBox.gd" type="Script" id=1]
 [ext_resource path="res://menu/assets/Rectangle 17308select.png" type="Texture" id=2]
+[ext_resource path="res://menu/assets/player_select/Group 30start_menu.png" type="Texture" id=3]
+[ext_resource path="res://menu/assets/player_select/Group 33start_menu.png" type="Texture" id=4]
+[ext_resource path="res://menu/assets/player_select/Group 34start_menu.png" type="Texture" id=5]
+[ext_resource path="res://menu/assets/player_select/Group 35start_menu.png" type="Texture" id=6]
+[ext_resource path="res://menu/assets/player_select/Group 37start_menu.png" type="Texture" id=7]
+[ext_resource path="res://menu/assets/player_select/Group 32start_menu.png" type="Texture" id=8]
+[ext_resource path="res://menu/assets/player_select/Group 31start_menu.png" type="Texture" id=9]
+[ext_resource path="res://menu/assets/player_select/Group 36start_menu.png" type="Texture" id=10]
 
 [node name="PlayerSelectionBox" type="Control"]
 script = ExtResource( 1 )
 
 [node name="SelectRect" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 2 )
 
 [node name="NameLabel" type="Label" parent="."]
@@ -38,5 +45,47 @@ rect_scale = Vector2( 0.8, 0.8 )
 text = "join!
 "
 align = 1
+
+[node name="PlayerGraphics" type="Node2D" parent="."]
+
+[node name="p4_start" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 3 )
+
+[node name="p3_start" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 9 )
+
+[node name="p2_start" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 8 )
+
+[node name="p1_start" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 4 )
+
+[node name="p1_active" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 5 )
+
+[node name="p2_active" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 6 )
+
+[node name="p3_active" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 10 )
+
+[node name="p4_active" type="Sprite" parent="PlayerGraphics"]
+visible = false
+position = Vector2( 96, 0 )
+texture = ExtResource( 7 )
 
 [connection signal="pressed" from="JoinButton" to="." method="toggle_playing"]

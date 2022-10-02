@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dolly%20front.png-e7d0f5c525552d2a491361bfd6f4705b.stex"
+path="res://.import/Group 37start_menu.png-d63655a962bb77da6f24cf7f18effd9a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/boop/assets/boops/Dolly%20front.png"
-dest_files=[ "res://.import/Dolly%20front.png-e7d0f5c525552d2a491361bfd6f4705b.stex" ]
+source_file="res://menu/assets/player_select/Group 37start_menu.png"
+dest_files=[ "res://.import/Group 37start_menu.png-d63655a962bb77da6f24cf7f18effd9a.stex" ]
 
 [params]
 

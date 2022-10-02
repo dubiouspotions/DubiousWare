@@ -12,6 +12,8 @@ func update():
 	# $BG.color =  Color("c5166d02") if player.is_playing else Color("8e220a0a")
 	$SelectRect.visible = player.is_playing 
 	$JoinButton/joinLabel.text = "joined!" if player.is_playing else "to join"
+	$PlayerGraphics.get_node(player.index+"_start").visible = true
+	$PlayerGraphics.get_node(player.index+"_active").visible = player.is_playing
 
 func _input(evt):
 	if player and evt.is_action_pressed(player.action_name("action")):
