@@ -45,24 +45,25 @@ tracks/0/keys = {
 script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
-margin_right = 1020.0
-margin_bottom = 1020.0
+margin_right = 1024.0
+margin_bottom = 1024.0
 
 [node name="Bg" type="Sprite" parent="Control"]
-position = Vector2( 581.5, 499.5 )
-scale = Vector2( 9.10156, 7.85156 )
+position = Vector2( 511.5, 515 )
+scale = Vector2( 8.00781, 8.09375 )
 texture = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 598, 513 )
-scale = Vector2( 0.401163, 0.401163 )
+position = Vector2( 525, 515 )
+scale = Vector2( 0.344961, 0.344961 )
 frames = SubResource( 1 )
 animation = "sad"
+frame = 1
 playing = true
 
 [node name="try" type="Label" parent="."]
 margin_top = 26.0
-margin_right = 1167.0
+margin_right = 1025.0
 margin_bottom = 160.0
 custom_fonts/font = SubResource( 2 )
 text = "Try not to cry"
@@ -71,7 +72,7 @@ valign = 1
 
 [node name="monster" type="Label" parent="."]
 margin_top = 26.0
-margin_right = 1167.0
+margin_right = 1020.0
 margin_bottom = 160.0
 custom_fonts/font = SubResource( 2 )
 text = "Oh, no, you monster!"
@@ -83,10 +84,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 4.14996
-margin_top = 840.938
-margin_right = 1171.15
-margin_bottom = 974.938
+margin_left = 4.0
+margin_top = 841.0
+margin_right = 1021.0
+margin_bottom = 975.0
 rect_scale = Vector2( 0.941963, 0.941963 )
 rect_pivot_offset = Vector2( 572, 75 )
 custom_fonts/font = SubResource( 2 )
