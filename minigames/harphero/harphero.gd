@@ -1,7 +1,7 @@
 extends BaseMiniGame
 
 var SCORE = 0
-var win_score = 3
+var win_score = 10
 
 var note_vel = 80
 
@@ -19,9 +19,12 @@ func _process(delta):
 	if Input.is_action_just_pressed(self.player_index+"_action"):	
 		$Mouth.play("hit")
 		$Mouth/ResetTimer.start(0.7)
+		SCORE += 1
 	
 	for note in $Notes.get_children():
 		note.position.y += delta * note_vel
+		
+	$huzzahMeter/huzzahBar.frame = SCORE
 
 func fail():
 	pass
