@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://minigames/puzzlebug/puzzlebug.gd" type="Script" id=1]
 [ext_resource path="res://minigames/puzzlebug/assets/piece03.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://minigames/puzzlebug/assets/background.png" type="Texture" id=18]
 [ext_resource path="res://minigames/puzzlebug/assets/piece01.png" type="Texture" id=19]
 [ext_resource path="res://minigames/puzzlebug/Piece.gd" type="Script" id=20]
+[ext_resource path="res://minigames/puzzlebug/assets/piece.ogg" type="AudioStream" id=21]
 
 [node name="puzzlebug" type="Node2D"]
 scale = Vector2( 0.8, 0.8 )
@@ -124,3 +125,6 @@ script = ExtResource( 20 )
 
 [node name="pile" type="Node2D" parent="board"]
 position = Vector2( 1180, 935 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )

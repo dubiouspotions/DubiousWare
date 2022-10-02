@@ -29,6 +29,7 @@ func _process(delta):
 		selected_piece.transform = selected_piece.original_transform
 		loosepieces.pop_front()
 		selected_piece.dehighlight()
+		$AudioStreamPlayer.play()
 	
 	if Input.is_action_pressed(self.player_index+"_action"):
 		pass
