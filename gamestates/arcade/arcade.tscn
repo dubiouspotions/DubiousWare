@@ -30,34 +30,34 @@ margin_bottom = 44.0
 [node name="splits" type="Node2D" parent="."]
 
 [node name="p1" type="Control" parent="splits"]
-margin_left = 132.0
-margin_top = 27.0
-margin_right = 446.0
-margin_bottom = 341.0
+margin_left = 131.0
+margin_top = 26.0
+margin_right = 447.0
+margin_bottom = 342.0
 rect_pivot_offset = Vector2( 166, 142 )
 rect_clip_content = true
 
 [node name="p2" type="Control" parent="splits"]
-margin_left = 578.0
-margin_top = 27.0
-margin_right = 892.0
-margin_bottom = 341.0
+margin_left = 577.0
+margin_top = 26.0
+margin_right = 893.0
+margin_bottom = 342.0
 rect_pivot_offset = Vector2( 166, 142 )
 rect_clip_content = true
 
 [node name="p3" type="Control" parent="splits"]
-margin_left = 132.0
-margin_top = 358.0
-margin_right = 446.0
-margin_bottom = 672.0
+margin_left = 131.0
+margin_top = 357.0
+margin_right = 447.0
+margin_bottom = 673.0
 rect_pivot_offset = Vector2( 166, 142 )
 rect_clip_content = true
 
 [node name="p4" type="Control" parent="splits"]
-margin_left = 578.0
-margin_top = 358.0
-margin_right = 892.0
-margin_bottom = 672.0
+margin_left = 577.0
+margin_top = 357.0
+margin_right = 893.0
+margin_bottom = 673.0
 rect_pivot_offset = Vector2( 166, 142 )
 
 [node name="scores" type="Node2D" parent="."]
@@ -105,6 +105,8 @@ custom_fonts/font = ExtResource( 6 )
 text = "0"
 align = 1
 valign = 1
+
+[node name="end" type="Node2D" parent="."]
 
 [node name="gamemusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
