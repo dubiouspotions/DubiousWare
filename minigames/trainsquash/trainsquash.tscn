@@ -180,7 +180,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 250, 250 )
 
 [node name="Train" type="Node2D" parent="."]
-position = Vector2( 408, 190 )
+position = Vector2( 260, 190 )
 script = ExtResource( 9 )
 
 [node name="Back" type="Sprite" parent="Train"]
@@ -218,12 +218,12 @@ texture = ExtResource( 6 )
 script = ExtResource( 14 )
 
 [node name="DoorRight" type="Sprite" parent="Train"]
-position = Vector2( 0, 4 )
+position = Vector2( 25, 4 )
 texture = ExtResource( 4 )
 offset = Vector2( 16, 0 )
 
 [node name="DoorLeft" type="Sprite" parent="Train"]
-position = Vector2( 0, 3 )
+position = Vector2( -25, 3 )
 texture = ExtResource( 12 )
 offset = Vector2( -18, 0 )
 
@@ -234,6 +234,7 @@ offset = Vector2( 0.5, 0.5 )
 
 [node name="FillPlayer" type="AnimationPlayer" parent="Train"]
 root_node = NodePath("../AnimationPlayer")
+playback_speed = 0.0
 anims/Fill = SubResource( 11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Train"]
