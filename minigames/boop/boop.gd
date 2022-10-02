@@ -1,5 +1,6 @@
 extends BaseMiniGame
 
+var playerspeed = 6
 
 var boopcount = 0
 var poopcount = 0
@@ -96,7 +97,10 @@ func scale(node, s):
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var input = get_input_vector()
+	$Cursor.translate(input * playerspeed)
 	if Input.is_action_just_pressed(self.player_index+"_action"):	
+		$Cursor/AnimatedSprite.play("default")
 		didBoop = true
 		if dog is Boop:
 			print("WIN")
