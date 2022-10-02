@@ -67,6 +67,8 @@ func _ready():
 	$MainControl/Countdown.connect("countdown_done",self,"end_game")
 	update_score_labels()
 	
+	if game.current_minigame_index == game.TOTAL_MINIGAMES_IN_GAME-1:
+		$MainControl/InstructionsPanel/Label.text = "BOSS FIGHT!\n"+$MainControl/InstructionsPanel/Label.text
 	yield(get_tree().create_timer(1.5),"timeout")
 	$MainControl/InstructionsPanel.hide()
 
