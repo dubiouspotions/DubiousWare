@@ -216,7 +216,7 @@ stream = ExtResource( 5 )
 position = Vector2( 518, 614 )
 scale = Vector2( 1.725, 1.725 )
 frames = SubResource( 1 )
-frame = 4
+frame = 6
 playing = true
 
 [connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]
