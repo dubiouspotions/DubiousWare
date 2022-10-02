@@ -48,8 +48,8 @@ func fail():
 func success():
 	current_needle.success()
 	SCORE += 1
-	$Doll/AnimatedDoll.scale.x -= 0.1
-	$Doll/AnimatedDoll.scale.y -= 0.1
+	$Doll/AnimatedDoll.play("hit")
+	$Timer2.start(0.6)
 	new_needle()
 	if SCORE >= win_score:
 		current_needle.visible = false
@@ -57,8 +57,15 @@ func success():
 			if (needle.STATE != "HIT"):
 				needle.visible = false
 		$Doll/Circle.visible = false
-		$Doll/AnimatedDoll.play("evil")
 
 func _on_Timer_timeout():
 	new_needle()
+	pass # Replace with function body.
+
+
+func _on_Timer2_timeout():
+	if SCORE >= win_score:
+		$Doll/AnimatedDoll.play("evil")
+	else:
+		$Doll/AnimatedDoll.play("default")
 	pass # Replace with function body.

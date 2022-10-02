@@ -54,7 +54,6 @@ func _ready():
 			split.player = p
 			split.player_index = p.index
 			find_node(p.index).add_child(split)
-	
 	$Countdown.connect("countdown_done",self,"end_game")
 	update_score_labels()
 
