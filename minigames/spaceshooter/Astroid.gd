@@ -21,9 +21,12 @@ func _ready():
 			astroid = $Astroid4
 			
 	astroid.show()
+	for child in astroid.get_children():
+		for collision_shape in child.get_children():
+			collision_shape.disabled = false
+	
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (started):
 		self.position.y = self.position.y + delta * speed

@@ -6,9 +6,13 @@ func _ready():
 
 export (int) var speed = 130
 var Velocity = Vector2()
+var dead = false
 
 func _physics_process(delta):
-	
+	if dead:
+		return
+		
+		
 	if Input.is_action_pressed(self.get_parent().player_index+"_left"):
 		Velocity.x = -speed
 		$AnimatedSprite.play("left")
@@ -41,5 +45,8 @@ func _physics_process(delta):
 	
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
-		if collision.collider.is_in_group("Walls"):
-			print("collided wioth", collision.collider.name)
+#		if collision.collider.is_in_group("Walls"):
+#			print("collided wioth", collision.collider.name)
+		
+		$AnimatedSprite.play("death")
+		dead = true

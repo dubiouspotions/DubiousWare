@@ -3,6 +3,8 @@ extends BaseMiniGame
 var rng = RandomNumberGenerator.new()
 
 func getPlayerDidWin():
+	if $Player.dead:
+		return false
 	return true
 
 # Called when the node enters the scene tree for the first time.
