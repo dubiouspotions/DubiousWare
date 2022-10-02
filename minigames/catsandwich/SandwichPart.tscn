@@ -1,0 +1,42 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0009_baguette.png" type="Texture" id=1]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0007_pink-cat.png" type="Texture" id=2]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0001_bread.png" type="Texture" id=3]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0000_flag.png" type="Texture" id=4]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0004_Lettuce.png" type="Texture" id=5]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0003_cat.png" type="Texture" id=6]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0002_purple-sandwich.png" type="Texture" id=7]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0005_cat.png" type="Texture" id=8]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0010_kitten.png" type="Texture" id=9]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0011_lettuce.png" type="Texture" id=10]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0006_bread.png" type="Texture" id=11]
+[ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0008_pink-sandwich.png" type="Texture" id=12]
+[ext_resource path="res://minigames/catsandwich/SandwichPart.gd" type="Script" id=13]
+[ext_resource path="res://minigames/catsandwich/assets/mixkit-domestic-cat-hungry-meow-45.wav" type="AudioStream" id=14]
+[ext_resource path="res://minigames/catsandwich/assets/pop-sound-87553.mp3" type="AudioStream" id=15]
+[ext_resource path="res://minigames/catsandwich/assets/creaturechitter-92099.mp3" type="AudioStream" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+
+[node name="cat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="bread" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="flag" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )

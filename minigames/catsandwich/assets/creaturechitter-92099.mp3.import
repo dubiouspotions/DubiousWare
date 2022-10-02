@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/creaturechitter-92099.mp3-2efef74d87854c37d167782229b2e8f8.mp3str"
+
+[deps]
+
+source_file="res://minigames/catsandwich/assets/creaturechitter-92099.mp3"
+dest_files=[ "res://.import/creaturechitter-92099.mp3-2efef74d87854c37d167782229b2e8f8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

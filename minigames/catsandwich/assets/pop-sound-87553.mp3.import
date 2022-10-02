@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pop-sound-87553.mp3-e3f541442e427b1f654958e9074b1515.mp3str"
+
+[deps]
+
+source_file="res://minigames/catsandwich/assets/pop-sound-87553.mp3"
+dest_files=[ "res://.import/pop-sound-87553.mp3-e3f541442e427b1f654958e9074b1515.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
