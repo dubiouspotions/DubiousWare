@@ -14,6 +14,11 @@ class Dog:
 		if not _tex: 
 			_tex = load(file)
 		return _tex
+
+	func node():
+		if not _tex:
+			_tex = load(file)
+		return _tex.instance()
 			
 class Boop:
 	extends Dog
@@ -21,6 +26,10 @@ class Poop:
 	extends Dog
 	
 var dog: Dog
+var didBoop = false
+
+func getPlayerDidWin():
+	return (didBoop and dog is Boop) or (not didBoop and dog is Poop)
 
 func glob(path) -> Array:
 	var dir = Directory.new()
@@ -30,7 +39,7 @@ func glob(path) -> Array:
 	var names = []
 	var name = dir.get_next()
 	while name != "":
-		if name[0] != "." and not name.ends_with("import"):
+		if name[0] != "." and name.ends_with("tscn"):
 			name = root + path + "/" + name
 			print("Found file " + name)
 			names.push_back(name)
@@ -54,18 +63,34 @@ func _ready():
 	var lists = [boops, poops]
 	lists.shuffle()
 	dog = next(lists[0])
-	printt(dog.file, dog.texture())
-	$Sprite.set_texture(dog.texture())
+	
+	add_child(newdog(boops))
+	add_child(newdog(boops))
+	add_child(newdog(poops))
+	add_child(newdog(poops))
+	for i in range(0, 6):
+		lists.shuffle()
+		add_child(newdog(lists[0]))
 	
 func next(list: Array) -> Dog:
 	var dog = list.pop_front()
 	list.push_back(dog)
 	return dog
 
+func newdog(list) -> Node2D:
+	var dog = next(list)
+	var node = dog.node()
+	var margin = 200
+	node.position.x = rand_range(margin, 1024-margin)
+	node.position.y = rand_range(margin, 1024-margin)
+	var scale = rand_range(0.1, 0.3)
+	node.scale = Vector2(scale, scale)
+	return node
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed(self.player_index+"_action"):	
+		didBoop = true
 		if dog is Boop:
 			print("WIN")
 		if dog is Poop:

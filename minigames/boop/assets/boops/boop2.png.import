@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tofu%20back.png-8efd80ba90c033ef232b339bfade6b30.stex"
+path="res://.import/boop2.png-91ee92b8938255e0f68131a20949ea39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/boop/assets/poops/Tofu%20back.png"
-dest_files=[ "res://.import/Tofu%20back.png-8efd80ba90c033ef232b339bfade6b30.stex" ]
+source_file="res://minigames/boop/assets/boops/boop2.png"
+dest_files=[ "res://.import/boop2.png-91ee92b8938255e0f68131a20949ea39.stex" ]
 
 [params]
 

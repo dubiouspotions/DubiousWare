@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rondel%20back.png-e20922d261c7846bf85c3c64dd66f131.stex"
+path="res://.import/boop1.png-cf6194b32dc0e39b358489e7601bb722.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/boop/assets/poops/Rondel%20back.png"
-dest_files=[ "res://.import/Rondel%20back.png-e20922d261c7846bf85c3c64dd66f131.stex" ]
+source_file="res://minigames/boop/assets/boops/boop1.png"
+dest_files=[ "res://.import/boop1.png-cf6194b32dc0e39b358489e7601bb722.stex" ]
 
 [params]
 

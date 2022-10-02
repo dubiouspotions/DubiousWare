@@ -150,19 +150,23 @@ p2_action={
 }
 p3_up={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+ ]
 }
 p3_left={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+ ]
 }
 p3_right={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+ ]
 }
 p3_down={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+ ]
 }
 p3_action={
 "deadzone": 0.5,

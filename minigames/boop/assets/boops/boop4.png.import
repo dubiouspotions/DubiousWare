@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dolly%20back.png-e40e4428de3d5b33eaf8bc59e16183ac.stex"
+path="res://.import/boop4.png-17babd9204f8e35d9d89eb3308ede6c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/boop/assets/poops/Dolly%20back.png"
-dest_files=[ "res://.import/Dolly%20back.png-e40e4428de3d5b33eaf8bc59e16183ac.stex" ]
+source_file="res://minigames/boop/assets/boops/boop4.png"
+dest_files=[ "res://.import/boop4.png-17babd9204f8e35d9d89eb3308ede6c3.stex" ]
 
 [params]
 
