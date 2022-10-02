@@ -64,29 +64,36 @@ func _ready():
 	lists.shuffle()
 	dog = next(lists[0])
 	
-	add_child(newdog(boops))
-	add_child(newdog(boops))
-	add_child(newdog(poops))
-	add_child(newdog(poops))
-	for i in range(0, 6):
+	$Dogs.add_child(newdog(boops, 0))
+	$Dogs.add_child(newdog(boops, 1))
+	$Dogs.add_child(newdog(poops, 2))
+	$Dogs.add_child(newdog(poops, 3))
+	for i in range(4, 9):
 		lists.shuffle()
-		add_child(newdog(lists[0]))
+		$Dogs.add_child(newdog(lists[0], i))
 	
 func next(list: Array) -> Dog:
 	var dog = list.pop_front()
 	list.push_back(dog)
 	return dog
 
-func newdog(list) -> Node2D:
+func newdog(list, i) -> Node2D:
 	var dog = next(list)
 	var node = dog.node()
 	var margin = 200
-	node.position.x = rand_range(margin, 1024-margin)
-	node.position.y = rand_range(margin, 1024-margin)
-	var scale = rand_range(0.1, 0.3)
-	node.scale = Vector2(scale, scale)
+	node.owner = owner
+	node.position.x = lerp(margin, 1024-margin, 1.0/3*(i%3))
+	node.position.y = lerp(margin, 1024-margin, 1.0/3*(i/3))
+	var scale = rand_range(0.1, 0.2)
+	scale(node, scale)
+	node.gravity_scale = 0
 	return node
 
+func scale(node, s):
+	for child in node.get_children():
+		child.scale.x = s
+		child.scale.y = s
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed(self.player_index+"_action"):	
