@@ -9,7 +9,7 @@ var frames = [11,10, 9, 8, 7,  6, 5, 4, 3, 2]
 
 var spawn_counter = 0
 var SCORE = 0
-var win_score = 5
+var win_score = 6
 
 var state = "RUNNING"
 
