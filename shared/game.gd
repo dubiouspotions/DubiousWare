@@ -56,5 +56,6 @@ func has_any_players():
 func _input(event):
 	if Input.is_action_pressed("ui_cancel"):
 		end()
-	# stop events from propagating up to main menu
-	get_tree().set_input_as_handled()
+	# stop events from propagating up to main menu if a game is running
+	if current_arcade:
+		get_tree().set_input_as_handled()
