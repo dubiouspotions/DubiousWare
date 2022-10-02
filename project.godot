@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "Reference",
 "class": "Arcade",
 "language": "GDScript",
-"path": "res://gamestates/arcade/arcade.gd"
+"path": "res://shared/arcade.gd"
 }, {
 "base": "Node2D",
 "class": "BaseMiniGame",
