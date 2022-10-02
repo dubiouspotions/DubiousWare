@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/SannaLivijnWexell_purple_scifi_city_smoke_4201a126-798f-4c04-96ac-83b6aad83934 1menu_bg.png-64ff46ac609edf2a759d3ed9d1706ec8.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://menu/assets/SannaLivijnWexell_purple_scifi_city_smoke_4201a126-798f-4c04-96ac-83b6aad83934 1menu_bg.png"
+dest_files=[ "res://.import/SannaLivijnWexell_purple_scifi_city_smoke_4201a126-798f-4c04-96ac-83b6aad83934 1menu_bg.png-64ff46ac609edf2a759d3ed9d1706ec8.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

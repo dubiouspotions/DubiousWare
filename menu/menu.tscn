@@ -3,8 +3,8 @@
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://menu/logo.png" type="Texture" id=2]
 [ext_resource path="res://fonts/dubious_theme.tres" type="Theme" id=3]
-[ext_resource path="res://menu/bg.png" type="Texture" id=4]
 [ext_resource path="res://menu/PlayerSelectionBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menu/assets/SannaLivijnWexell_purple_scifi_city_smoke_4201a126-798f-4c04-96ac-83b6aad83934 1menu_bg.png" type="Texture" id=6]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -13,10 +13,8 @@ theme = ExtResource( 3 )
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 683.28, 497.859 )
-scale = Vector2( 1.5979, 1.5979 )
-texture = ExtResource( 4 )
-offset = Vector2( -106, -192 )
+position = Vector2( 512, 350 )
+texture = ExtResource( 6 )
 
 [node name="Logo" type="Sprite" parent="."]
 position = Vector2( 610, 276 )
