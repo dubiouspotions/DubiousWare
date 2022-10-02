@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://minigames/trainsquash/trainsquash.gd" type="Script" id=1]
 [ext_resource path="res://minigames/trainsquash/asset/Station%20Back.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://minigames/trainsquash/asset/Passenger MID.png" type="Texture" id=6]
 [ext_resource path="res://minigames/trainsquash/asset/Passenger R.png" type="Texture" id=7]
 [ext_resource path="res://minigames/trainsquash/asset/TRAIN Front.png" type="Texture" id=8]
+[ext_resource path="res://minigames/trainsquash/Train.gd" type="Script" id=9]
 [ext_resource path="res://minigames/trainsquash/asset/Passenger L.png" type="Texture" id=10]
 [ext_resource path="res://minigames/trainsquash/asset/PLAYER.png" type="Texture" id=11]
 [ext_resource path="res://minigames/trainsquash/asset/TRAIN Door L.png" type="Texture" id=12]
@@ -46,6 +47,7 @@ offset = Vector2( 250, 250 )
 
 [node name="Train" type="Node2D" parent="."]
 position = Vector2( 260, 190 )
+script = ExtResource( 9 )
 
 [node name="Back" type="Sprite" parent="Train"]
 position = Vector2( -9, -8 )

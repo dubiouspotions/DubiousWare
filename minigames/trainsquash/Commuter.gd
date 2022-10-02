@@ -5,8 +5,7 @@ var game
 var train
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	train = game.find_node("DoorCollider")
-	
+	train = game.find_node("Train") as Train
 	
 func _integrate_forces(state):
 	var speed = 1
@@ -22,6 +21,6 @@ func _integrate_forces(state):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Sprite.offset.y = rand_range(-2.0, 2.0)
-	pass
-	
-		
+	if position.y < 10:
+		hide()
+		queue_free()
