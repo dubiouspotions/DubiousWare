@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://menu/assets/Group 39StartButton.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://menu/assets/Group 11banner.png" type="Texture" id=4]
 [ext_resource path="res://menu/PlayerSelectionBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://menu/assets/SannaLivijnWexell_purple_scifi_city_smoke_4201a126-798f-4c04-96ac-83b6aad83934 1menu_bg.png" type="Texture" id=6]
+[ext_resource path="res://shared/assets/menumusic.wav" type="AudioStream" id=7]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -75,5 +76,8 @@ margin_left = 304.0
 margin_top = 154.0
 margin_right = 304.0
 margin_bottom = 154.0
+
+[node name="menumusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
