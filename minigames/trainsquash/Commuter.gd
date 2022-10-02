@@ -5,6 +5,7 @@ var game
 var train
 var commuterIdleTarget
 var commuterActiveTarget
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	train = game.find_node("Train") as Train
