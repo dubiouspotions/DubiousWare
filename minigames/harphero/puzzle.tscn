@@ -165,6 +165,7 @@ playing = true
 [node name="ResetTimer" type="Timer" parent="Mouth"]
 
 [node name="NoteTimer" type="Timer" parent="."]
+wait_time = 0.7
 autostart = true
 
 [node name="Notes" type="Node2D" parent="."]
