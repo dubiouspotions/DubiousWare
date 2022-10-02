@@ -9,7 +9,7 @@ var game
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	prep_game()
-	$StartButton.disabled = false
+	$StartButton.disabled = true
 	$menumusic.play()
 	config = load("user://config.tres")
 	if not config:
