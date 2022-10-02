@@ -42,6 +42,10 @@ func save_config():
 #	pass # Replace with function body.
 
 func _input(evt):
+	if game.has_any_players():
+		$StartButton.disabled = false
+	else:
+		$StartButton.disabled = true
 	if Input.is_action_pressed("ui_accept"):
 		_on_StartButton_pressed()
 
