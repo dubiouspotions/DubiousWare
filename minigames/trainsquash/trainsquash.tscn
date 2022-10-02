@@ -34,7 +34,7 @@ extents = Vector2( 97.5, 21 )
 extents = Vector2( 27.375, 11.25 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 26.875, 8.75 )
+extents = Vector2( 5.375, 8.75 )
 
 [node name="TrainSquash" type="Node2D"]
 scale = Vector2( 2, 2 )
@@ -146,15 +146,32 @@ shape = SubResource( 4 )
 position = Vector2( 374.5, -43.5 )
 shape = SubResource( 5 )
 
-[node name="DoorCollider" type="StaticBody2D" parent="Platform/GameArea"]
-collision_mask = 2
+[node name="DoorCollider" type="Area2D" parent="Platform/GameArea"]
+position = Vector2( 245, -50.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/GameArea/DoorCollider"]
-position = Vector2( 245, -50.5 )
 shape = SubResource( 6 )
 
 [node name="DoorBlocker" type="StaticBody2D" parent="Platform/GameArea"]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/GameArea/DoorBlocker"]
-position = Vector2( 245.625, -27.75 )
+position = Vector2( 218.5, -29.5 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Platform/GameArea/DoorBlocker"]
+position = Vector2( 244.5, -29.5 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform/GameArea/DoorBlocker"]
+position = Vector2( 257.5, -29.5 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform/GameArea/DoorBlocker"]
+position = Vector2( 270.5, -29.5 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Platform/GameArea/DoorBlocker"]
+position = Vector2( 231.5, -29.5 )
 shape = SubResource( 7 )

@@ -44,7 +44,11 @@ func _ready():
 	schedule(train_arrival_time + train_duration, "open_doors")
 	schedule(train_departure_time - doors_duration*2, "close_doors")
 	schedule(train_departure_time, "exit_train")
-	
+	var door = $Platform/GameArea/DoorCollider
+	door.connect("body_enter", self, "door_reached")
+
+func door_reached(area):
+	printt("Door reached!!")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -118,7 +122,7 @@ func close_doors():
 func gen_crowd():
 	var crowd = $Platform/GameArea/Commuters
 	var cs = load("res://minigames/trainsquash/Commuter.tscn")
-	for i in range(0, 2):
+	for i in range(0, 20):
 		var commuter = cs.instance()
 		commuter.game = self
 		
@@ -127,5 +131,4 @@ func gen_crowd():
 			rand_range(46.0, 200.0)
 		)
 		crowd.add_child(commuter)
-		printt(commuter.position)
 		
