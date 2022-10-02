@@ -81,3 +81,4 @@ position = Vector2( 335, 499 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 frame = 6
+playing = true
