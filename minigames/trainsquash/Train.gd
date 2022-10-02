@@ -34,66 +34,7 @@ func _ready():
 #	pass
 
 func arrive():
-	var y = position.y
-	tween.interpolate_property(
-		self, "position:x", 
-		train_enter, 
-		train_target, 
-		train_duration,
-		Tween.TRANS_QUAD, Tween.EASE_OUT
-	)
-	tween.start()
+	$AnimationPlayer.play("Arrive")
 
 func depart():
-	var y = position.y
-	tween.interpolate_property(
-		self, "position:x", 
-		train_target, 
-		train_exit,
-		train_duration,
-		Tween.TRANS_QUAD, Tween.EASE_IN
-	)
-	tween.start()
-	
-func open_doors():
-	var y = $Train/DoorLeft.position.y
-	tween.interpolate_property(
-		$Train/DoorLeft, "position", 
-		Vector2(0, y), 
-		Vector2(-door_travel, y), 
-		doors_duration,
-		Tween.TRANS_QUAD, Tween.EASE_IN_OUT
-	)
-	tween.start()
-	
-	y = $Train/DoorRight.position.y
-	tween2.interpolate_property(
-		$Train/DoorRight, "position", 
-		Vector2(0, y), 
-		Vector2(door_travel, y), 
-		doors_duration,
-		Tween.TRANS_QUAD, Tween.EASE_IN_OUT
-	)
-	tween2.start()
-	
-func close_doors():
-	var y = $Train/DoorLeft.position.y
-	tween.interpolate_property(
-		$Train/DoorLeft, "position", 
-		Vector2(-door_travel, y), 
-		Vector2(0, y), 
-		doors_duration,
-		Tween.TRANS_QUAD, Tween.EASE_IN_OUT
-	)
-	tween.start()
-	
-	y = $Train/DoorRight.position.y
-	tween2.interpolate_property(
-		$Train/DoorRight, "position", 
-		Vector2(door_travel, y), 
-		Vector2(0, y), 
-		doors_duration,
-		Tween.TRANS_QUAD, Tween.EASE_IN_OUT
-	)
-	tween2.start()
-	
+	$AnimationPlayer.play("Depart")
