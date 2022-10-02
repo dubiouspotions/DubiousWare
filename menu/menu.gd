@@ -10,7 +10,7 @@ func _ready():
 	config = load("user://config.tres")
 	if not config:
 		config = Config.new()
-	$DebugLevelText.text = config.debug_level
+	#$DebugLevelText.text = config.debug_level
 	var games = Arcade.all_games()
 	for name in games:
 		add_game_button(name)
@@ -33,22 +33,19 @@ func add_game_button(name: String):
 func save_config():
 	ResourceSaver.save("user://config.tres", config)
 
-func _on_Button_pressed():
-	if not game.has_any_players():
-		OS.alert("You must be at least one player to start a game. Press an action button (space, period, X on controller) to join.", "Oops!")
-		return
-	game.debug_level = $DebugLevelText.text
-	get_tree().get_root().add_child(game)
-	game.start()
-	
-
-
-func _on_TextEdit_text_changed():
-	config.debug_level = $DebugLevelText.text
-	save_config()
-	pass # Replace with function body.
+#func _on_TextEdit_text_changed():
+#	#config.debug_level = $DebugLevelText.text
+#	save_config()
+#	pass # Replace with function body.
 
 func _input(evt):
 	if Input.is_action_pressed("ui_accept"):
-		_on_Button_pressed()
+		_on_StartButton_pressed()
 
+func _on_StartButton_pressed():
+	if not game.has_any_players():
+		OS.alert("You must be at least one player to start a game. Press an action button (space, period, X on controller) to join.", "Oops!")
+		return
+	#game.debug_level = $DebugLevelText.text
+	get_tree().get_root().add_child(game)
+	game.start()

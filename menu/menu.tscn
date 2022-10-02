@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
-[ext_resource path="res://menu/logo.png" type="Texture" id=2]
+[ext_resource path="res://menu/assets/Group 39StartButton.png" type="Texture" id=2]
 [ext_resource path="res://fonts/dubious_theme.tres" type="Theme" id=3]
+[ext_resource path="res://menu/assets/Group 11banner.png" type="Texture" id=4]
 [ext_resource path="res://menu/PlayerSelectionBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://menu/assets/SannaLivijnWexell_purple_scifi_city_smoke_4201a126-798f-4c04-96ac-83b6aad83934 1menu_bg.png" type="Texture" id=6]
 
@@ -17,23 +18,19 @@ position = Vector2( 512, 350 )
 texture = ExtResource( 6 )
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 610, 276 )
-scale = Vector2( 0.805355, 0.805355 )
-texture = ExtResource( 2 )
-offset = Vector2( -106, -192 )
+position = Vector2( 512, 110 )
+texture = ExtResource( 4 )
 
-[node name="StartButton" type="Button" parent="."]
-margin_left = 851.0
-margin_top = 268.0
-margin_right = 999.0
-margin_bottom = 532.0
-text = "START!"
-
-[node name="DebugLevelText" type="TextEdit" parent="."]
-margin_top = 18.0
-margin_right = 156.0
-margin_bottom = 58.0
-rect_scale = Vector2( 0.5, 0.5 )
+[node name="StartButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -219.5
+margin_top = -127.0
+margin_right = 219.5
+margin_bottom = -40.0
+texture_normal = ExtResource( 2 )
 
 [node name="DebugButtons" type="GridContainer" parent="."]
 margin_left = 1.0
@@ -79,5 +76,4 @@ margin_top = 154.0
 margin_right = 304.0
 margin_bottom = 154.0
 
-[connection signal="pressed" from="StartButton" to="." method="_on_Button_pressed"]
-[connection signal="text_changed" from="DebugLevelText" to="." method="_on_TextEdit_text_changed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
