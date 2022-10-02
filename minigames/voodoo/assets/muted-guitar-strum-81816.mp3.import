@@ -11,5 +11,5 @@ dest_files=[ "res://.import/muted-guitar-strum-81816.mp3-fecc0d8eb2ae9bb70600041
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
