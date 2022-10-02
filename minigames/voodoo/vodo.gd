@@ -23,6 +23,7 @@ func new_needle():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rotation_speed = 40*(1 + difficulty/7.0)
 	new_needle()
 	pass # Replace with function body.
 
