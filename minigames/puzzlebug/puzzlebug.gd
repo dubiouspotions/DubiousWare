@@ -24,11 +24,13 @@ func _process(delta):
 	var movement = get_input_vector()*delta*1400
 	selected_piece.translate(movement)
 	selected_piece.highlight()
+	selected_piece.set_z_index(100) 
 	
 	if selected_piece.transform.get_origin().distance_to(selected_piece.original_transform.get_origin()) < 50:
 		selected_piece.transform = selected_piece.original_transform
 		loosepieces.pop_front()
 		selected_piece.dehighlight()
+		selected_piece.set_z_index(0)
 		$AudioStreamPlayer.play()
 	
 	if Input.is_action_pressed(self.player_index+"_action"):
