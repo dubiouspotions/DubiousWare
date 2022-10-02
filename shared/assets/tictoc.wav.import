@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/voodo.wav-5e063096f16a633b7edcdb7b2090041f.sample"
+path="res://.import/tictoc.wav-51b9fc2542af4bed18c47f233e4a112a.sample"
 
 [deps]
 
-source_file="res://minigames/deathbyastroid/assets/voodo.wav"
-dest_files=[ "res://.import/voodo.wav-5e063096f16a633b7edcdb7b2090041f.sample" ]
+source_file="res://shared/assets/tictoc.wav"
+dest_files=[ "res://.import/tictoc.wav-51b9fc2542af4bed18c47f233e4a112a.sample" ]
 
 [params]
 
