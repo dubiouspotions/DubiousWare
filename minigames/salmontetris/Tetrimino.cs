@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class Tetrimino : KinematicBody2D
 {
     private List<Block> blocks = new List<Block>();
-    private const float speed = 150;
+    private const float speed = 300;
     
     [Signal]
     public delegate void done();

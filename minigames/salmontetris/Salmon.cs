@@ -2,9 +2,9 @@ using Godot;
 
 public class Salmon : KinematicBody2D
 {
-    const int walkSpeed = 200;
-    const float gravity = 200;
-    const float jumpSpeed = 200;
+    const int walkSpeed = 400;
+    const float gravity = 400;
+    const float jumpSpeed = 400;
     const ulong jumpTime = 300;
     const ulong jumpCancelTime = 175;
 
