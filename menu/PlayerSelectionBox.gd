@@ -13,7 +13,7 @@ func update():
 	$JoinButton/joinLabel.text = "joined!" if player.is_playing else "to join"
 
 func _input(evt):
-	if player.is_action_pressed():
+	if evt.is_action_pressed(player.action_name("action")):
 		toggle_playing()
 
 
