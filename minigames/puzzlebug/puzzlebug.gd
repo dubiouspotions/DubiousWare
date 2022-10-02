@@ -9,7 +9,7 @@ func getPlayerDidWin():
 func _ready():
 	var pieces = $board/pieces.get_children()
 	pieces.shuffle()
-	loosepieces = pieces.slice(0,2)
+	loosepieces = pieces.slice(0,difficulty/1.6)
 	for piece in loosepieces:
 		piece.original_transform = piece.transform
 		piece.transform = $board/pile.transform
