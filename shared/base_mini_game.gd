@@ -6,7 +6,7 @@ func getPlayerDidWin():
 	return false
 	
 var player
-var player_index
+export var player_index = "p1"
 var difficulty: int
 
 func get_input_vector() -> Vector2:
