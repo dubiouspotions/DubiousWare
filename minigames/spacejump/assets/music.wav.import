@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/SpaceBIG.wav-f0882d95c187c9000005b5eba00619c2.sample"
+path="res://.import/music.wav-e52584dfb06d12fbb91e09c30241291a.sample"
 
 [deps]
 
-source_file="res://minigames/spacejump/assets/SpaceBIG.wav"
-dest_files=[ "res://.import/SpaceBIG.wav-f0882d95c187c9000005b5eba00619c2.sample" ]
+source_file="res://minigames/spacejump/assets/music.wav"
+dest_files=[ "res://.import/music.wav-e52584dfb06d12fbb91e09c30241291a.sample" ]
 
 [params]
 
