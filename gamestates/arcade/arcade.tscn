@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gamestates/arcade/Screen 11arcade_bg.png" type="Texture" id=1]
 [ext_resource path="res://shared/arcade.gd" type="Script" id=2]
 [ext_resource path="res://countdown/Countdown.tscn" type="PackedScene" id=3]
 [ext_resource path="res://minigames/spacejump/assets/music.wav" type="AudioStream" id=4]
 [ext_resource path="res://shared/assets/tictoc.wav" type="AudioStream" id=5]
+[ext_resource path="res://fonts/score_font.tres" type="DynamicFont" id=6]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2( 2, 2 )
@@ -64,10 +65,10 @@ rect_pivot_offset = Vector2( 166, 142 )
 [node name="p1" type="Label" parent="scores"]
 margin_left = 39.0
 margin_top = 218.0
-margin_right = 77.0
-margin_bottom = 256.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 115.0
+margin_bottom = 294.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "0"
 align = 1
 valign = 1
@@ -75,10 +76,10 @@ valign = 1
 [node name="p2" type="Label" parent="scores"]
 margin_left = 909.0
 margin_top = 218.0
-margin_right = 947.0
-margin_bottom = 248.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 985.0
+margin_bottom = 294.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "0"
 align = 1
 valign = 1
@@ -86,10 +87,10 @@ valign = 1
 [node name="p3" type="Label" parent="scores"]
 margin_left = 38.0
 margin_top = 548.0
-margin_right = 76.0
-margin_bottom = 586.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 114.0
+margin_bottom = 624.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "0"
 align = 1
 valign = 1
@@ -97,10 +98,10 @@ valign = 1
 [node name="p4" type="Label" parent="scores"]
 margin_left = 909.0
 margin_top = 548.0
-margin_right = 947.0
-margin_bottom = 586.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 985.0
+margin_bottom = 624.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "0"
 align = 1
 valign = 1
