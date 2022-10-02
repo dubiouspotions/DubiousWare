@@ -28,7 +28,7 @@ func loadRandomMinigame():
 
 	if debug_level != "":
 		chosen_game = debug_level
-	print("PLAYING minigame "+chosen_game)
+	print("PLAYING minigame "+chosen_game+" at difficulty "+str(game.current_minigame_index))
 	
 	var scene = load("res://minigames/" + chosen_game + "/" + chosen_game + ".tscn")
 	if scene == null:
