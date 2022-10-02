@@ -1,13 +1,8 @@
 class_name Arcade 
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var debug_level = ""
 var game
-
 
 static func all_games() -> Array:
 	var gamesd = Directory.new()
@@ -38,24 +33,23 @@ func loadRandomMinigame():
 
 func _ready():
 	randomize()
-	
-
-	var screen_size = get_viewport_rect().size
-	var mg_scale = 0.25 # Minigame scale factor
-	var mg_size = Vector2(1024 * mg_scale, 1024 * mg_scale)
-	var n_games = Vector2(2, 2)
+	# var screen_size = get_viewport_rect().size
+	# var mg_scale = 0.25 # Minigame scale factor
+	# var mg_size = Vector2(1024 * mg_scale, 1024 * mg_scale)
+	# var n_games = Vector2(2, 2)
+	var game_scale = 0.307
 	
 	var scene = loadRandomMinigame()
 	 
 	for p in game.players:
 		if p.is_playing:
 			var split = scene.instance()
-			split.transform = split.transform.scaled(Vector2(mg_scale, mg_scale))
+			split.transform = split.transform.scaled(Vector2(game_scale, game_scale))
 			split.player = p
 			split.player_index = p.index
 			split.difficulty = game.current_minigame_index
 			find_node(p.index).add_child(split)
-	$Countdown.connect("countdown_done",self,"end_game")
+	$MainControl/Countdown.connect("countdown_done",self,"end_game")
 	update_score_labels()
 
 func end_game():
