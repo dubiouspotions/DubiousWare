@@ -66,7 +66,7 @@ func gen_crowd():
 		commuter.game = self
 		
 		commuter.position = Vector2(
-			rand_range(-50*2, 50.0*2),
+			rand_range(-200, 200),
 			rand_range(46.0, 200.0)
 		)
 		#commuter.connect("body_entered", self, "grunt")
