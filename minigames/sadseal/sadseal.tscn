@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://minigames/sadseal/assets/sprites/sad01.png" type="Texture" id=1]
 [ext_resource path="res://minigames/deathbyastroid/assets/sprites/bg.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://minigames/sadseal/assets/sprites/sad02.png" type="Texture" id=4]
 [ext_resource path="res://minigames/sadseal/assets/sprites/cry.png" type="Texture" id=5]
 [ext_resource path="res://fonts/BarlowSemiCondensed-SemiBold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://minigames/sadseal/assets/music.wav" type="AudioStream" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -58,7 +59,6 @@ position = Vector2( 525, 515 )
 scale = Vector2( 0.344961, 0.344961 )
 frames = SubResource( 1 )
 animation = "sad"
-frame = 1
 playing = true
 
 [node name="try" type="Label" parent="."]
@@ -99,3 +99,6 @@ valign = 1
 root_node = NodePath("../cry")
 method_call_mode = 1
 anims/pulse = SubResource( 3 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
