@@ -57,9 +57,10 @@ func _process(delta):
 		_hasPlayerSelected = true
 		## player has won - they're on the right frame and have snapped the photo
 		if (_currentFrame == 10):
+			$ShutterSound.play()
 			_timer.stop()
 			_hasPlayerSucceeded = true
 		else:
-			#play buzzer sound
+			$BorkSound.play()
 			pass
 			

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://minigames/groupie/assets/sprites/2.png" type="Texture" id=1]
 [ext_resource path="res://minigames/groupie/assets/sprites/10-snap.png" type="Texture" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://minigames/deathbyastroid/assets/sprites/bg.png" type="Texture" id=22]
 [ext_resource path="res://minigames/groupie/groupie.gd" type="Script" id=23]
 [ext_resource path="res://minigames/groupie/assets/sprites/3-snap.png" type="Texture" id=24]
+[ext_resource path="res://minigames/groupie/assets/shutter.wav" type="AudioStream" id=25]
+[ext_resource path="res://minigames/groupie/assets/bork.wav" type="AudioStream" id=26]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -63,3 +65,9 @@ frame = 10
 position = Vector2( 516, 504 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 5 )
+
+[node name="ShutterSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 25 )
+
+[node name="BorkSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 26 )
