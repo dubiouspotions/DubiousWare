@@ -15,6 +15,7 @@ func fail():
 	STATE = "FAILED"
 	$DirectionAnim.scale.x = 1
 	$DirectionAnim.scale.y = 1
+#	$Fail.play()
 
 func success():
 	STATE = "SUCCESS"
