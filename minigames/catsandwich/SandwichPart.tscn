@@ -13,9 +13,9 @@
 [ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0006_bread.png" type="Texture" id=11]
 [ext_resource path="res://minigames/catsandwich/assets/cat_sandwich_0008_pink-sandwich.png" type="Texture" id=12]
 [ext_resource path="res://minigames/catsandwich/SandwichPart.gd" type="Script" id=13]
-[ext_resource path="res://minigames/catsandwich/assets/mixkit-domestic-cat-hungry-meow-45.wav" type="AudioStream" id=14]
-[ext_resource path="res://minigames/catsandwich/assets/pop-sound-87553.mp3" type="AudioStream" id=15]
-[ext_resource path="res://minigames/catsandwich/assets/creaturechitter-92099.mp3" type="AudioStream" id=16]
+[ext_resource path="res://minigames/catsandwich/assets/Cat-Screech4.wav" type="AudioStream" id=14]
+[ext_resource path="res://minigames/catsandwich/assets/Cat-WIN.wav" type="AudioStream" id=15]
+[ext_resource path="res://minigames/catsandwich/assets/Cat-Splat3.wav" type="AudioStream" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
