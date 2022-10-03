@@ -5,7 +5,8 @@ onready var _snapshot = $snapshots
 onready var _overlays = $overlays
 onready var _currentFrame = 1
 var _hasPlayerSucceeded = false
-var _randomNumberArray = [0,1,2,3,4,5,6,7,8,9,10]
+var _hasPlayerSelected = false
+var _randomNumberArray = [0,1,2,3,4,5,6,7,8,9]
 
 
 
@@ -17,7 +18,13 @@ func getInstruction():
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var frames = [10]
 	_randomNumberArray.shuffle()
+	for i in range(0, max(2, difficulty)):
+		frames.push_back(_randomNumberArray.pop_front())
+	frames.shuffle()
+	_randomNumberArray = frames
+	print(_randomNumberArray)
 	$overlays.hide()
 	
 	_timer = Timer.new()
@@ -30,13 +37,13 @@ func _ready():
 	pass
 
 func _on_Timer_timeout():
-	_overlays.hide()
-	if not _randomNumberArray.empty():
-		_currentFrame = _randomNumberArray.pop_front()
+	#_overlays.hide()
+	_currentFrame = _randomNumberArray.pop_front()
+	_randomNumberArray.push_back(_currentFrame)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
-	if _hasPlayerSucceeded:
+	if _hasPlayerSelected:
 		return false
 	
 	_snapshot.frame = _currentFrame
@@ -45,6 +52,7 @@ func _process(delta):
 		_overlays.frame = _currentFrame
 		_overlays.show()
 		
+		_hasPlayerSelected = true
 		## player has won - they're on the right frame and have snapped the photo
 		if (_currentFrame == 10):
 			_timer.stop()
