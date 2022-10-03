@@ -3,27 +3,11 @@ extends Node2D
 
 var debug_level = ""
 var game
+export var game_name = ""
 
-static func all_games() -> Array:
-	var gamesd = Directory.new()
-	gamesd.open("res://minigames/")
-	gamesd.list_dir_begin()
-	var gamenames = []
-	var game_name = gamesd.get_next()
-	while game_name != "":
-		if game_name[0] != ".":
-			print("Found minigame "+game_name)
-			gamenames.push_back(game_name)
-		game_name = gamesd.get_next()
-	return gamenames
 
 func loadRandomMinigame():
-	var gamenames = all_games()
-	gamenames.shuffle()
-	var chosen_game = gamenames[0]
-	while chosen_game == game.last_game_name:
-		gamenames.shuffle()
-		chosen_game = gamenames[0]
+	var chosen_game = game_name
 	game.last_game_name = chosen_game
 
 	if debug_level != "":

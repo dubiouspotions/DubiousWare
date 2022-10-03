@@ -15,7 +15,7 @@ func _ready():
 	if not config:
 		config = Config.new()
 	#$DebugLevelText.text = config.debug_level
-	var games = Arcade.all_games()
+	var games = Game.all_games()
 	for name in games:
 		add_game_button(name)
 
