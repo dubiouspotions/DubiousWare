@@ -44,7 +44,7 @@ func _physics_process(delta):
 		velocity = velocity + acceleration.rotated(self.rotation)*delta
 		move_and_slide(velocity, Vector2(0, -1))
 		
-		$flame.visible = input.y != 0
+		$flame.visible = input.y < 0
 		$flame.frame = randi() % 3
 		
 		for i in get_slide_count():
