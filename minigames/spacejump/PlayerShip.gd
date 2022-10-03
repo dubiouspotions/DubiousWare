@@ -7,13 +7,15 @@ extends KinematicBody2D
 var acceleration = Vector2()
 var velocity = Vector2()
 const rotation_speed = 10
-export var are_you_winning_son = true
+export var are_you_winning_son = false
+export var is_alive = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func lose():
+	is_alive = false
 	are_you_winning_son = false
 	$explosion.emitting = true
 	$flame.visible = false
@@ -24,18 +26,27 @@ func lose():
 	$explosion.emitting = false
 	acceleration = Vector2()
 
+func win():
+	$"../blingsound".play()
+	$"../pickup".queue_free()
+	are_you_winning_son = true
+
 func _physics_process(delta):
-	if are_you_winning_son:
+	if is_alive:
 		var input = $"..".get_input_vector()
 		self.rotation = self.rotation + input.x * 5 * delta
 		
-		acceleration.y = min(0, input.y) * 300
+		acceleration.y = min(0, input.y) * 600
 		velocity = velocity + acceleration.rotated(self.rotation)*delta
 		move_and_slide(velocity, Vector2(0, -1))
 		
 		$flame.visible = input.y != 0
 		$flame.frame = randi() % 3
 		
-		if get_slide_count() > 0:
-			lose()
+		for i in get_slide_count():
+			var collision = get_slide_collision(i)
+			if collision.collider == $"../pickup":
+				win()
+			else:
+				lose()
 	

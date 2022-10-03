@@ -9,7 +9,7 @@ func getInstruction():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$planets/Planet.r_speed =  1 + difficulty/3
+	$planets/Planet.r_speed =  0.5 + difficulty/5
 	pass # Replace with function body.
 
 

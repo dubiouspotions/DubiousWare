@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bling.wav-abfd690163304ff8f1b867fd29488a3c.sample"
+
+[deps]
+
+source_file="res://minigames/spacejump/assets/bling.wav"
+dest_files=[ "res://.import/bling.wav-abfd690163304ff8f1b867fd29488a3c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
