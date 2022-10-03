@@ -28,8 +28,12 @@ func lose():
 
 func win():
 	$"../blingsound".play()
-	$"../pickup".queue_free()
+	$"../pickup/shape".queue_free()
+	$"../pickup/sprite".queue_free()
 	are_you_winning_son = true
+	$"../pickup/winsparkle".emitting = true
+	yield(get_tree().create_timer(0.25), "timeout")
+	$"../pickup/winsparkle".emitting = false
 
 func _physics_process(delta):
 	if is_alive:

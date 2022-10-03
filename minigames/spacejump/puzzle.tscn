@@ -26,7 +26,7 @@ animations = [ {
 } ]
 
 [sub_resource type="Gradient" id=7]
-colors = PoolColorArray( 1, 0, 0, 1, 1, 1, 1, 0 )
+colors = PoolColorArray( 1, 0, 0.761719, 1, 1, 1, 1, 0 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 22, 530.5 )
@@ -149,12 +149,36 @@ stream = ExtResource( 13 )
 [node name="pickup" type="StaticBody2D" parent="."]
 position = Vector2( 896, 576 )
 
-[node name="Rock" type="Sprite" parent="pickup"]
+[node name="sprite" type="Sprite" parent="pickup"]
 position = Vector2( 6, 8 )
 scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 12 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup"]
+[node name="winsparkle" type="CPUParticles2D" parent="pickup"]
+position = Vector2( 1, 1 )
+rotation = 1.5708
+emitting = false
+amount = 334
+preprocess = 0.35
+randomness = 0.53
+texture = ExtResource( 12 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 169.77
+initial_velocity_random = 0.18
+angular_velocity = 528.43
+angular_velocity_random = 1.0
+radial_accel = 0.94
+radial_accel_random = 1.0
+angle = 8.5
+angle_random = 0.48
+scale_amount = 0.03
+scale_amount_random = 0.05
+color_ramp = SubResource( 7 )
+hue_variation = -0.17
+hue_variation_random = 0.36
+
+[node name="shape" type="CollisionShape2D" parent="pickup"]
 position = Vector2( 6, 8 )
 shape = SubResource( 8 )
 

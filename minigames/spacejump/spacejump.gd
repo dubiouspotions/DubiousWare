@@ -5,7 +5,7 @@ func getPlayerDidWin():
 	return $PlayerShip.are_you_winning_son
 
 func getInstruction():
-	return "Don't crash!"
+	return "Rescue the diamond!"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
