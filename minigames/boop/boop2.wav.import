@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/boop2.wav-7e308aec57aa52b8bc8cdf608af6b85b.sample"
+
+[deps]
+
+source_file="res://minigames/boop/boop2.wav"
+dest_files=[ "res://.import/boop2.wav-7e308aec57aa52b8bc8cdf608af6b85b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

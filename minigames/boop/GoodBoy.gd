@@ -1,0 +1,2 @@
+class_name GoodBoy
+extends RigidBody2D
