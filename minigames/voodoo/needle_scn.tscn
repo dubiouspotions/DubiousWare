@@ -2,7 +2,7 @@
 
 [ext_resource path="res://minigames/voodoo/Needle.gd" type="Script" id=1]
 [ext_resource path="res://minigames/voodoo/assets/gamejam_0000_needle.png" type="Texture" id=2]
-[ext_resource path="res://minigames/voodoo/assets/yay-6120.mp3" type="AudioStream" id=3]
+[ext_resource path="res://minigames/voodoo/assets/nail hit.wav" type="AudioStream" id=3]
 [ext_resource path="res://minigames/voodoo/assets/muted-guitar-strum-81816.mp3" type="AudioStream" id=4]
 
 [node name="Node2D" type="Node2D"]
@@ -16,6 +16,7 @@ texture = ExtResource( 2 )
 
 [node name="Hit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -15.0
 
 [node name="Fail" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
