@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-d65eac50d1d92c007fe6c4fe8476de0b.mp3str"
+
+[deps]
+
+source_file="res://minigames/deathbyastroid/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-d65eac50d1d92c007fe6c4fe8476de0b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

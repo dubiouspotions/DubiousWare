@@ -6,7 +6,7 @@
 [ext_resource path="res://menu/assets/Screen 1 - step 2menu_bg.png" type="Texture" id=4]
 [ext_resource path="res://menu/PlayerSelectionBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://menu/assets/Group 16StartButton_active.png" type="Texture" id=6]
-[ext_resource path="res://shared/assets/menumusic.wav" type="AudioStream" id=7]
+[ext_resource path="res://shared/assets/menumusic.mp3" type="AudioStream" id=7]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0

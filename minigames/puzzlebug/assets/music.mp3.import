@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-e8702d2087f23927d54ca55562a0d12e.mp3str"
+
+[deps]
+
+source_file="res://minigames/puzzlebug/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-e8702d2087f23927d54ca55562a0d12e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
