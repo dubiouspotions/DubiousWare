@@ -3,6 +3,7 @@ extends BaseMiniGame
 var loosepieces:Array
 
 func getPlayerDidWin():
+	$win.play()
 	return loosepieces.size() == 0
 func getInstruction():
 	return "BUILD THE BUG!"
