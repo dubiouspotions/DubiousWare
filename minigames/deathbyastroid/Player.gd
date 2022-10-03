@@ -49,4 +49,5 @@ func _physics_process(delta):
 #			print("collided wioth", collision.collider.name)
 		
 		$AnimatedSprite.play("death")
+		$AudioStreamPlayer.play()
 		dead = true

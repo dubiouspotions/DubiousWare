@@ -17,12 +17,12 @@ func lose():
 	are_you_winning_son = false
 	$explosion.emitting = true
 	$flame.visible = false
+	$"../explosionsound".play()
 	yield(get_tree().create_timer(0.2), "timeout")
 	$sprite.visible = false
 	yield(get_tree().create_timer(1.0), "timeout")
 	$explosion.emitting = false
 	acceleration = Vector2()
-	
 
 func _physics_process(delta):
 	if are_you_winning_son:
