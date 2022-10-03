@@ -20,7 +20,8 @@ var train_entered = false
 var train_left = false
 
 var train: Train
-
+var grunts = []
+	
 
 func getPlayerDidWin():
 	return train.full
@@ -39,18 +40,22 @@ func schedule(time, obj, method):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	train = $Train
+	var a: String
+	for child in $Platform/GameArea/Player.get_children():
+		if child.name.begins_with("Grunt"):
+			grunts.push_back(child)
 	
 	gen_crowd()
 	train.arrive()
 	schedule(train_departure_time, train, "depart")
-
+	$Platform/GameArea/Player/Area2D.connect("body_entered", self, "grunt")
+	
 func door_reached(area):
 	printt("Door reached!!")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	gametime += delta
-	
 
 func gen_crowd():
 	var crowd = $Platform/GameArea/Commuters
@@ -63,5 +68,11 @@ func gen_crowd():
 			rand_range(-50*2, 50.0*2),
 			rand_range(46.0, 200.0)
 		)
+		#commuter.connect("body_entered", self, "grunt")
 		crowd.add_child(commuter)
 		
+
+func grunt(node):
+	if not node is Commuter: return
+	var grunt = grunts[randi()%3] as Node2D
+	if not grunt.playing: grunt.play()
