@@ -58,6 +58,7 @@ position = Vector2( 525, 515 )
 scale = Vector2( 0.344961, 0.344961 )
 frames = SubResource( 1 )
 animation = "sad"
+frame = 1
 playing = true
 
 [node name="try" type="Label" parent="."]
