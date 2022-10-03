@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-9cf158641ed2cc4ba51345119b8e82d0.mp3str"
+
+[deps]
+
+source_file="res://minigames/groupie/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-9cf158641ed2cc4ba51345119b8e82d0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
