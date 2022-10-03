@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dab-BAD.wav-c77ee40655bf1f89b154e9d87c0df05e.sample"
+
+[deps]
+
+source_file="res://minigames/dab/assets/Dab-BAD.wav"
+dest_files=[ "res://.import/Dab-BAD.wav-c77ee40655bf1f89b154e9d87c0df05e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

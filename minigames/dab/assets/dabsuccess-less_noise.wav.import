@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dabsuccess-less_noise.wav-f7b92c9b0d0fa81a70f1df58663b139c.sample"
+
+[deps]
+
+source_file="res://minigames/dab/assets/dabsuccess-less_noise.wav"
+dest_files=[ "res://.import/dabsuccess-less_noise.wav-f7b92c9b0d0fa81a70f1df58663b139c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

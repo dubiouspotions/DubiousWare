@@ -1,10 +1,10 @@
 [gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://minigames/dab/assets/dabman/Dabby Dabman-Sheet.png" type="Texture" id=1]
-[ext_resource path="res://minigames/dab/assets/sfx-mlg-airhorn-failure.mp3" type="AudioStream" id=2]
+[ext_resource path="res://minigames/dab/assets/Dab-BAD.wav" type="AudioStream" id=2]
 [ext_resource path="res://minigames/dab/puzzle.gd" type="Script" id=3]
 [ext_resource path="res://minigames/dab/assets/dabman/Saddy Dabman-Sheet.png" type="Texture" id=4]
-[ext_resource path="res://minigames/dab/assets/sfx-mlg-airhorn-success.mp3" type="AudioStream" id=5]
+[ext_resource path="res://minigames/dab/assets/dabsuccess-less_noise.wav" type="AudioStream" id=5]
 [ext_resource path="res://minigames/dab/assets/Dabarrow.png" type="Texture" id=6]
 [ext_resource path="res://minigames/dab/assets/Dabmeter.png" type="Texture" id=7]
 [ext_resource path="res://minigames/dab/assets/dabman/Idle Dabman-Sheet.png" type="Texture" id=8]
@@ -208,6 +208,7 @@ one_shot = true
 [node name="FailureSound" type="AudioStreamPlayer" parent="."]
 pause_mode = 1
 stream = ExtResource( 2 )
+volume_db = -8.0
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
@@ -216,7 +217,6 @@ stream = ExtResource( 5 )
 position = Vector2( 518, 614 )
 scale = Vector2( 1.725, 1.725 )
 frames = SubResource( 1 )
-frame = 6
 playing = true
 
 [connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]
