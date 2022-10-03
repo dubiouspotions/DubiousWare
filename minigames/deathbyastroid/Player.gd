@@ -4,7 +4,7 @@ extends KinematicBody2D
 func _ready():
 	pass # Replace with function body.
 
-export (int) var speed = 130
+export (int) var speed = 250
 var Velocity = Vector2()
 var dead = false
 
