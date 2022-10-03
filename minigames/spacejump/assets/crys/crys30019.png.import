@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rock.png-e7753045df0fffaef9f60cf51615d7ac.stex"
+path="res://.import/crys30019.png-7a4d1396d3b5fcafcfa9dbf7f238ef48.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/spacejump/assets/Rock.png"
-dest_files=[ "res://.import/Rock.png-e7753045df0fffaef9f60cf51615d7ac.stex" ]
+source_file="res://minigames/spacejump/assets/crys/crys30019.png"
+dest_files=[ "res://.import/crys30019.png-7a4d1396d3b5fcafcfa9dbf7f238ef48.stex" ]
 
 [params]
 
