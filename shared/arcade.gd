@@ -40,6 +40,7 @@ func loadRandomMinigame():
 	var audio_file = "res://minigames/" + chosen_game + "/assets/music.mp3"
 	if File.new().file_exists(audio_file):
 		var sfx = load(audio_file) 
+		$gamemusic.stop()
 		$gamemusic.stream = sfx
 		$gamemusic.play()
 	
