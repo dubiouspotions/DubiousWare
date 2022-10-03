@@ -23,6 +23,7 @@ func prep_game():
 	game = Game.new()
 	game.menu = self
 	update_player_selection()
+	$menumusic.play()
 	
 func update_player_selection():
 	for p in game.players:
