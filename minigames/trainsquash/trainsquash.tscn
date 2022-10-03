@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://minigames/trainsquash/trainsquash.gd" type="Script" id=1]
 [ext_resource path="res://minigames/trainsquash/asset/Station%20Back.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://minigames/trainsquash/sound/grunt1.wav" type="AudioStream" id=19]
 [ext_resource path="res://minigames/trainsquash/sound/grunt2.wav" type="AudioStream" id=20]
 [ext_resource path="res://minigames/trainsquash/sound/Train-oofnobump.wav" type="AudioStream" id=21]
+[ext_resource path="res://minigames/trainsquash/sound/train loop.wav" type="AudioStream" id=22]
 
 [sub_resource type="Animation" id=11]
 resource_name = "Fill"
@@ -130,6 +131,18 @@ tracks/5/keys = {
 "method": "play"
 } ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("TrainEngineSound:pitch_scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.01 ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "Depart"
@@ -212,6 +225,18 @@ tracks/5/keys = {
 "method": "play"
 } ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("TrainEngineSound:pitch_scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 0.01, 1.0 ]
+}
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 32, -32, 0, 32, 0 )
@@ -247,7 +272,7 @@ position = Vector2( 259, 271 )
 stream = ExtResource( 17 )
 
 [node name="Train" type="Node2D" parent="."]
-position = Vector2( 260, 190 )
+position = Vector2( 852, 190 )
 script = ExtResource( 9 )
 
 [node name="BellSound" type="AudioStreamPlayer2D" parent="Train"]
@@ -260,7 +285,12 @@ volume_db = 10.0
 
 [node name="TrainArriveSound" type="AudioStreamPlayer2D" parent="Train"]
 stream = ExtResource( 18 )
-volume_db = 24.0
+volume_db = 10.0
+
+[node name="TrainEngineSound" type="AudioStreamPlayer2D" parent="Train"]
+stream = ExtResource( 22 )
+volume_db = 20.0
+autoplay = true
 
 [node name="Back" type="Sprite" parent="Train"]
 position = Vector2( -9, -8 )
@@ -297,12 +327,12 @@ texture = ExtResource( 6 )
 script = ExtResource( 14 )
 
 [node name="DoorRight" type="Sprite" parent="Train"]
-position = Vector2( 25, 4 )
+position = Vector2( 0, 4 )
 texture = ExtResource( 4 )
 offset = Vector2( 16, 0 )
 
 [node name="DoorLeft" type="Sprite" parent="Train"]
-position = Vector2( -25, 3 )
+position = Vector2( 0, 3 )
 texture = ExtResource( 12 )
 offset = Vector2( -18, 0 )
 
