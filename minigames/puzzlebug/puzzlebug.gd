@@ -3,7 +3,6 @@ extends BaseMiniGame
 var loosepieces:Array
 
 func getPlayerDidWin():
-	$win.play()
 	return loosepieces.size() == 0
 func getInstruction():
 	return "BUILD THE BUG!"
@@ -16,11 +15,13 @@ func _ready():
 		piece.original_transform = piece.transform
 		piece.transform = $board/pile.transform
 		
-
-
+var winplayed = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
 	if loosepieces.empty():
+		if winplayed == false:
+			$win.play()
+			winplayed = true
 		return
 	var selected_piece:Piece = loosepieces.front()
 	if not selected_piece:
