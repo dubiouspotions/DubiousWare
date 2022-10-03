@@ -40,6 +40,7 @@ func schedule(time, obj, method):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	train = $Train
+	train.commuters_required = 100 + difficulty * 10
 	var a: String
 	for child in $Platform/GameArea/Player.get_children():
 		if child.name.begins_with("Grunt"):
@@ -65,7 +66,7 @@ func gen_crowd():
 		commuter.game = self
 		
 		commuter.position = Vector2(
-			rand_range(-50*2, 50.0*2),
+			rand_range(-200, 200),
 			rand_range(46.0, 200.0)
 		)
 		#commuter.connect("body_entered", self, "grunt")

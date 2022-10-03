@@ -289,7 +289,7 @@ volume_db = 10.0
 
 [node name="TrainEngineSound" type="AudioStreamPlayer2D" parent="Train"]
 stream = ExtResource( 22 )
-volume_db = 20.0
+volume_db = 24.0
 autoplay = true
 
 [node name="Back" type="Sprite" parent="Train"]

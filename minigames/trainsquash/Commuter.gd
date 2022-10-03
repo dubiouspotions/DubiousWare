@@ -14,18 +14,18 @@ func _ready():
 	
 func _integrate_forces(state):
 	var speed = 0.4
-	var target = commuterIdleTarget.global_position
 	if train.arrived:
-		target = commuterActiveTarget.global_position
-	var v = state.linear_velocity
-	var u = (target - state.transform.origin) * speed
-	var f = u - v
-	state.add_central_force(f * self.mass)
+		var target = commuterActiveTarget.global_position
+		var v = state.linear_velocity
+		var u = (target - state.transform.origin) * speed
+		var f = u - v
+		state.add_central_force(f * self.mass)
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Sprite.offset.y = rand_range(-2.0, 2.0)
+	if train.arrived:
+		$Sprite.offset.y = rand_range(-2.0, 2.0)
 	if position.y < 10 and train.arrived:
 		hide()
 		queue_free()
