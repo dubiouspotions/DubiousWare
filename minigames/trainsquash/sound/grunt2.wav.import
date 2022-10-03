@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/grunt2.wav-b7bb511b5bef668143b872098425ae77.sample"
+
+[deps]
+
+source_file="res://minigames/trainsquash/sound/grunt2.wav"
+dest_files=[ "res://.import/grunt2.wav-b7bb511b5bef668143b872098425ae77.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
