@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crowd.mp3-be23c0044e7f21d08806370f421537b9.mp3str"
+
+[deps]
+
+source_file="res://minigames/trainsquash/sound/crowd.mp3"
+dest_files=[ "res://.import/crowd.mp3-be23c0044e7f21d08806370f421537b9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

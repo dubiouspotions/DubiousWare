@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://minigames/trainsquash/trainsquash.gd" type="Script" id=1]
 [ext_resource path="res://minigames/trainsquash/asset/Station%20Back.png" type="Texture" id=2]
@@ -12,8 +12,12 @@
 [ext_resource path="res://minigames/trainsquash/asset/Passenger L.png" type="Texture" id=10]
 [ext_resource path="res://minigames/trainsquash/asset/PLAYER.png" type="Texture" id=11]
 [ext_resource path="res://minigames/trainsquash/asset/TRAIN Door L.png" type="Texture" id=12]
+[ext_resource path="res://minigames/trainsquash/sound/hisss2.wav" type="AudioStream" id=13]
 [ext_resource path="res://minigames/trainsquash/CrowdCenter.gd" type="Script" id=14]
 [ext_resource path="res://minigames/trainsquash/Player.gd" type="Script" id=15]
+[ext_resource path="res://minigames/trainsquash/sound/bell.wav" type="AudioStream" id=16]
+[ext_resource path="res://minigames/trainsquash/sound/crowd.mp3" type="AudioStream" id=17]
+[ext_resource path="res://minigames/trainsquash/sound/hisss1.wav" type="AudioStream" id=18]
 
 [sub_resource type="Animation" id=11]
 resource_name = "Fill"
@@ -95,6 +99,34 @@ tracks/3/keys = {
 "method": "did_arrive"
 } ]
 }
+tracks/4/type = "method"
+tracks/4/path = NodePath("TrainArriveSound")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("DoorSound")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "Depart"
@@ -149,6 +181,34 @@ tracks/3/keys = {
 "method": "will_depart"
 } ]
 }
+tracks/4/type = "method"
+tracks/4/path = NodePath("DoorSound")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("BellSound")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 32, -32, 0, 32, 0 )
@@ -179,9 +239,25 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 offset = Vector2( 250, 250 )
 
+[node name="CrowdSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 259, 271 )
+stream = ExtResource( 17 )
+
 [node name="Train" type="Node2D" parent="."]
 position = Vector2( 260, 190 )
 script = ExtResource( 9 )
+
+[node name="BellSound" type="AudioStreamPlayer2D" parent="Train"]
+stream = ExtResource( 16 )
+volume_db = 10.0
+
+[node name="DoorSound" type="AudioStreamPlayer2D" parent="Train"]
+stream = ExtResource( 13 )
+volume_db = 10.0
+
+[node name="TrainArriveSound" type="AudioStreamPlayer2D" parent="Train"]
+stream = ExtResource( 18 )
+volume_db = 24.0
 
 [node name="Back" type="Sprite" parent="Train"]
 position = Vector2( -9, -8 )
@@ -195,7 +271,7 @@ margin_bottom = 21.0
 rect_clip_content = true
 
 [node name="gfx" type="Sprite" parent="Train/CrowdLeft"]
-position = Vector2( -144.5, 43 )
+position = Vector2( 0, 43 )
 texture = ExtResource( 10 )
 offset = Vector2( 247, 0 )
 script = ExtResource( 14 )
@@ -208,7 +284,7 @@ margin_bottom = 40.0
 rect_clip_content = true
 
 [node name="gfx" type="Sprite" parent="Train/CrowdRight"]
-position = Vector2( 160, 35.5 )
+position = Vector2( 0, 35.5 )
 texture = ExtResource( 7 )
 offset = Vector2( -65, 0 )
 script = ExtResource( 14 )

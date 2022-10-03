@@ -14,14 +14,17 @@ var full = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$FillPlayer.current_animation = "Fill"
-
+	$"../CrowdSound".play()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func commuter_boarded():
 	boarded_commuters += 1
-	$FillPlayer.seek(float(boarded_commuters)/float(commuters_required))
+	var m = float(boarded_commuters)/float(commuters_required)
+	$FillPlayer.seek(m)
+	$"../CrowdSound".volume_db = linear2db(0.2 + 1-m)
 	full = boarded_commuters >= commuters_required
 	if full:
 		depart()
