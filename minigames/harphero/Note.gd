@@ -11,11 +11,12 @@ func set_direction(dir):
 	DIR = dir
 	$DirectionAnim.play(dir)
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func fail():
 	STATE = "FAILED"
 	$DirectionAnim.scale.x = 1
 	$DirectionAnim.scale.y = 1
-#	$Fail.play()
 
 func success():
 	STATE = "SUCCESS"

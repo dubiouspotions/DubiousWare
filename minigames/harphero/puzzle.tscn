@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://minigames/harphero/harphero.gd" type="Script" id=1]
 [ext_resource path="res://minigames/harphero/assets/Play Animation - Sprite Sheet.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://minigames/harphero/assets/huzzah-anim-1.png" type="Texture" id=6]
 [ext_resource path="res://minigames/harphero/assets/huzzah-anim-0.png" type="Texture" id=7]
 [ext_resource path="res://minigames/harphero/assets/huzzah-meter-indicator.png" type="Texture" id=8]
+[ext_resource path="res://minigames/harphero/assets/Fail5.wav" type="AudioStream" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -180,6 +181,9 @@ frame = 1
 [node name="huzzahBar" type="AnimatedSprite" parent="huzzahMeter"]
 position = Vector2( -10.5, 15 )
 frames = SubResource( 21 )
+
+[node name="Fail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 
 [connection signal="timeout" from="Mouth/ResetTimer" to="." method="_on_ResetTimer_timeout"]
 [connection signal="timeout" from="NoteTimer" to="." method="_on_NoteTimer_timeout"]

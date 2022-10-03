@@ -80,6 +80,7 @@ func _process(delta):
 	$huzzahMeter/huzzahBar.frame = SCORE
 
 func fail():
+	$Fail.play()
 	if SCORE > 0:
 		SCORE -= 1
 	pass
@@ -97,6 +98,7 @@ func action(dir):
 				success()
 				note.success()
 			else:
+				fail()
 				note.fail()
 
 func _on_ResetTimer_timeout():
