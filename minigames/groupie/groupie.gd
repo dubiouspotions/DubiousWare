@@ -20,8 +20,10 @@ func getInstruction():
 func _ready():
 	var frames = [10]
 	_randomNumberArray.shuffle()
-	for i in range(0, max(2, difficulty)):
-		frames.push_back(_randomNumberArray.pop_front())
+	for i in range(0, 1 + difficulty):
+		if not _randomNumberArray.empty():
+			var frame = _randomNumberArray.pop_front()
+			frames.push_back(frame)
 	frames.shuffle()
 	_randomNumberArray = frames
 	print(_randomNumberArray)
