@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-4af41e63821fe112e417603285f7c875.mp3str"
+
+[deps]
+
+source_file="res://minigames/salmontetris/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-4af41e63821fe112e417603285f7c875.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

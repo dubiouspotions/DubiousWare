@@ -37,7 +37,7 @@ func loadRandomMinigame():
 	
 	$tictoc.play() 
 		
-	var audio_file = "res://minigames/" + chosen_game + "/assets/music.wav"
+	var audio_file = "res://minigames/" + chosen_game + "/assets/music.mp3"
 	if File.new().file_exists(audio_file):
 		var sfx = load(audio_file) 
 		$gamemusic.stream = sfx

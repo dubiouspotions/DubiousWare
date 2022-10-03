@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-1b7aeb9d4b395011d8fb5b193ff36efa.mp3str"
+
+[deps]
+
+source_file="res://minigames/catsandwich/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-1b7aeb9d4b395011d8fb5b193ff36efa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

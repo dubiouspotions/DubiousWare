@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-d21b85f46c8c330e0ed0573cca2422d6.mp3str"
+
+[deps]
+
+source_file="res://minigames/boop/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-d21b85f46c8c330e0ed0573cca2422d6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

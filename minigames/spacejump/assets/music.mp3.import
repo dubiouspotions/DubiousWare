@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music.mp3-5b0697212c8c4224c91cfda01119ffa8.mp3str"
+
+[deps]
+
+source_file="res://minigames/spacejump/assets/music.mp3"
+dest_files=[ "res://.import/music.mp3-5b0697212c8c4224c91cfda01119ffa8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
