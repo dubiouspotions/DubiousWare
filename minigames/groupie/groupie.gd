@@ -10,7 +10,7 @@ var _randomNumberArray = [0,1,2,3,4,5,6,7,8,9,10]
 
 
 func getPlayerDidWin():
-	return true
+	return _hasPlayerSucceeded
 
 func getInstruction():
 	return "Snap the group selfie!"
@@ -31,7 +31,8 @@ func _ready():
 
 func _on_Timer_timeout():
 	_overlays.hide()
-	_currentFrame = _randomNumberArray.pop_front()
+	if not _randomNumberArray.empty():
+		_currentFrame = _randomNumberArray.pop_front()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
